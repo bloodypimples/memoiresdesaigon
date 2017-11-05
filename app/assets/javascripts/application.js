@@ -11,10 +11,10 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
 //= require_tree .
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 $(document).ready(function(){
 
   var fixed_point = 150
@@ -57,4 +57,6 @@ $(document).ready(function(){
   $('.exit').click(function(){
     $('.nav > .items').toggleClass('revealed');
   })
+
+  $('.datepicker').datepicker();
 })

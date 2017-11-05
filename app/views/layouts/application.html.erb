@@ -3,8 +3,8 @@
   <head>
     <title>Memoires De Saigon</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
@@ -14,7 +14,9 @@
 
       <div class="nav-wrapper">
         <div class="nav">
-          <div class="logo"></div>
+          <a href="/">
+            <div class="logo"></div>
+          </a>
           <div class="hamburger">≡</div>
           <ul class="items">
             <li class="exit">×</li>
@@ -28,29 +30,6 @@
       </div>
 
       <div class="body">
-        <div id="slideshow">
-           <div>
-             <div class="text">
-               <h2 class="hidden">A TRIP DOWN MEMORY LANE IN SAIGON</h2>
-               <div class="innertext hidden">
-                 <p>Unforgetable experience to grasp all that Saigon has to offer:</p>
-                 <p>heritage, culture, food, nightlife and much more</p>
-               </div>
-             </div>
-             <%= image_tag '5377844736_d4553acddd_b-copy-2-1024x683.png' %>
-           </div>
-           <div>
-             <div class="text">
-               <h2 class="hidden">DISCOVER THE UNSEEN, THE LESS TRAVELLED</h2>
-               <div class="innertext hidden">
-                 <p>Unforgetable experience to grasp all that Saigon has to offer:</p>
-                 <p>heritage, culture, food, nightlife and much more</p>
-               </div>
-             </div>
-             <%= image_tag '1-2-1024x682-1024x683.png' %>
-           </div>
-        </div>
-
         <%= yield %>
       </div>
 

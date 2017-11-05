@@ -1,3 +1,6 @@
+/*
+ *= require jquery-ui
+ */
 @import url('https://fonts.googleapis.com/css?family=Allura|Marko+One');
 $gold: #967a50;
 $denim: #0f2453;
@@ -6,11 +9,13 @@ $normal: 'Allura', cursive;
 h2{
   font-family: $heading;
   font-size: 48px;
+  color: $denim;
 }
 p{
   font-family: $normal;
   font-size: 28px;
-  margin: 0px 10px;
+  margin: 0px;
+  color: $denim;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -478,6 +483,7 @@ body > .wrapper{
   position: relative;
   background-color: #bbbbbb;
   height: 8000px;
+  overflow: hidden;
 }
 .nav-wrapper{
   position: absolute;
@@ -577,6 +583,10 @@ body > .wrapper{
       transition: all 300ms ease;
       transform: scale(1);
       opacity: 1;
+      color: white;
+      p{
+        color: white;
+      }
     }
     h2.hidden{
       opacity: 0;
@@ -599,7 +609,149 @@ body > .wrapper{
   display: none;
   cursor: pointer;
 }
+.row{
+  background-color: white;
+  overflow: hidden;
+  &:after{
+    content: " ";
+    display: table;
+    clear: both;
+  }
+  &.introduction{
+    display: flex;
+  }
+}
+.seperator{
+  width: 100px;
+  height: 2px;
+  display: block;
+  background-color: $denim;
+  margin: 20px 0px;
+}
+.col-6{
+  width: 50%;
+  float: left;
+  &.introduction{
+    padding: 0px 80px;
+    box-sizing: border-box;
+  }
+  &.booking{
+    padding: 0px 80px;
+    box-sizing: border-box;
+    background-color: rgba(1,1,1,.1);
+  }
+}
+svg{
+  fill: $gold;
+}
+.timeandweather{
+  margin: 60px 0px;
+  display: flex;
+  p{
+    margin-left: 8px;
+    font-size: 20px;
+    font-family: $heading;
+  }
+  .time, .weather{
+    display: flex;
+    align-items: center;
+  }
+  .weather{
+    margin-right: 100px;
+  }
+}
+.infos{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  .info{
+    h2{
+      font-size: 24px;
+    }
+    .value{
+      margin-top: 40px;
+      background-color: white;
+      text-align: center;
+      position: relative;
+      .month{
+        color: $gold;
+        font-family: $heading;
+        font-size: 20px;
+        padding-top: 30px;
+      }
+      .date, .people{
+        color: $denim;
+        font-family: $heading;
+        font-size: 60px;
+        margin-top: 40px;
+      }
+      .popup-icon{
+        margin-top: 40px;
+        &.up{
+          padding-top: 21px;
+        }
+        svg{
+          cursor: pointer;
+        }
+      }
+      &:after{
+        content: " ";
+        display: block;
+        position: absolute;
+        top: -16px;
+        left: calc(50% - 15px);
+        width: 0px;
+        height: 0px;
+        border-left: 16px solid transparent;
+        border-right: 16px solid transparent;
+        border-bottom: 16px solid white;
+      }
+    }
+  }
+}
+.submit_button_and_hotline{
+  margin-top: 100px;
+  text-align: right;
+  .submit{
+    font-family: $heading;
+    color: $gold;
+    padding: 20px 40px;
+    display: inline-block;
+    border: 2px solid $gold;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover{
+      background-color: $gold;
+      color: white;
+    }
+  }
+  h2{
+    font-size: 14px;
+    &:nth-child(1){
+      margin-top: 30px;
+    }
+  }
+  p{
+    font-size: 10px;
+    font-family: $heading;
+  }
+}
 @media(max-width: 1000px){
+  .infos{
+    .info{
+      width: 30%;
+      text-align: center;
+    }
+  }
+  .hotline{
+    padding-bottom: 50px;
+  }
+  .col-6{
+    width: 100%;
+  }
+  .row{
+    flex-direction: column;
+  }
   .nav{
     position: fixed;
     width: 100%;
@@ -659,5 +811,22 @@ body > .wrapper{
   }
   p{
     font-size: 24px;
+  }
+}
+@media(max-width: 600px){
+  .col-6.booking, .col-6.introduction{
+    padding: 20px;
+  }
+  .col-6.booking{
+    h2{
+      font-size: 20px;
+    }
+    .info{
+      .value{
+        .month{
+          font-size: 16px;
+        }
+      }
+    }
   }
 }
