@@ -50,4 +50,11 @@ $(document).ready(function(){
       .appendTo('#slideshow');
   }, 8000);
 
+  $('.hamburger').click(function(){
+    $('.nav > .items').toggleClass('revealed');
+  })
+
+  $('.exit').click(function(){
+    $('.nav > .items').toggleClass('revealed');
+  })
 })
