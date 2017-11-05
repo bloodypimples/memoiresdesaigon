@@ -1,0 +1,759 @@
+@import url("https://fonts.googleapis.com/css?family=Allura|Marko+One");
+/* line 6, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+h2 {
+  font-family: "Marko One", serif;
+  font-size: 48px;
+}
+
+/* line 10, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+p {
+  font-family: "Allura", cursive;
+  font-size: 28px;
+  margin: 0px 10px;
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* line 41, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 54, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 62, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 76, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+/* line 89, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 99, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 108, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 119, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 132, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 142, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 152, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 161, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 171, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 182, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 190, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 199, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 208, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 216, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 220, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 231, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 240, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 249, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 257, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 269, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 285, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 295, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 306, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 317, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 329, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+/* line 340, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 351, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 365, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 374, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 383, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 393, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 403, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+/* line 412, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 422, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+/* line 435, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+/* line 444, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 455, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+/* line 463, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+/* line 474, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 477, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+body > .wrapper {
+  position: relative;
+  background-color: #bbbbbb;
+  height: 8000px;
+}
+
+/* line 482, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav-wrapper {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  margin: 0 auto;
+  height: 140px;
+}
+
+/* line 490, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav {
+  z-index: 99;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 0px 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/* line 492, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav.fixed {
+  position: fixed;
+  background-color: white;
+}
+/* line 496, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav.fixed .items a {
+  color: #0f2453;
+  text-shadow: none;
+}
+/* line 501, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav.fixed .logo {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  background-image: url("/assets/logo-04-300x232.png");
+  background-position: 50% 50%;
+}
+/* line 517, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav .logo {
+  position: relative;
+  height: 140px;
+  width: 140px;
+  background-image: url("/assets/logo-memoires2-300x249.png");
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* line 526, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav .items {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Marko One', serif;
+  text-transform: uppercase;
+}
+/* line 534, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav .items a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 0px 0px 1px #000000;
+  margin-left: 30px;
+}
+/* line 539, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav .items a.active, .nav .items a:hover {
+  color: #967a50;
+  text-decoration: underline;
+}
+
+/* line 547, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+#slideshow {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+
+/* line 553, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+#slideshow > div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+/* line 563, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+#slideshow > div img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/* line 571, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+#slideshow > div .text {
+  position: relative;
+  z-index: 1;
+  color: white;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+/* line 576, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+#slideshow > div .text h2, #slideshow > div .text .innertext {
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+/* line 581, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+#slideshow > div .text h2.hidden {
+  opacity: 0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+/* line 585, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+#slideshow > div .text .innertext.hidden {
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+/* line 591, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.exit {
+  font-size: 50px;
+  color: #0f2453;
+  display: none;
+}
+
+/* line 596, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.hamburger {
+  font-size: 50px;
+  color: #0f2453;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  /* line 603, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .nav {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    padding: 0px 30px;
+  }
+  /* line 607, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .nav .logo {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    background-image: url("/assets/logo-04-300x232.png");
+    background-position: 50% 50%;
+  }
+  /* line 614, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .nav .items {
+    position: fixed;
+    top: 0px;
+    right: -200px;
+    width: 200px;
+    height: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: white;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 20px;
+    padding-top: 60px;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  /* line 628, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .nav .items a {
+    color: #0f2453;
+    text-shadow: none;
+    margin: 0px;
+    display: block;
+    margin-bottom: 20px;
+  }
+  /* line 635, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .nav .items .exit {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+  /* line 642, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .nav .items.revealed {
+    right: 0px;
+  }
+  /* line 646, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .nav .hamburger {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    line-height: 1;
+  }
+}
+@media (max-width: 700px) {
+  /* line 657, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  h2 {
+    font-size: 38px;
+  }
+
+  /* line 660, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  p {
+    font-size: 24px;
+  }
+}
