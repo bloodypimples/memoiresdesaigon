@@ -9,6 +9,50 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="wrapper">
+
+      <div class="nav-wrapper">
+        <div class="nav">
+          <div class="logo"></div>
+          <ul class="items">
+            <li><%= link_to "Home", root_path, class: current_page(root_path) %></li>
+            <li><%= link_to "Stay", stay_path, class: current_page(stay_path) %></li>
+            <li><%= link_to "Explore", explore_path, class: current_page(explore_path) %></li>
+            <li><%= link_to "Share", share_path, class: current_page(share_path) %></li>
+            <li><%= link_to "Contact", contact_path, class: current_page(contact_path) %></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="body">
+        <div id="slideshow">
+           <div>
+             <div class="text">
+               <h2 class="hidden">A TRIP DOWN MEMORY LANE IN SAIGON</h2>
+               <div class="innertext hidden">
+                 <p>Unforgetable experience to grasp all that Saigon has to offer:</p>
+                 <p>heritage, culture, food, nightlife and much more</p>
+               </div>
+             </div>
+             <%= image_tag '5377844736_d4553acddd_b-copy-2-1024x683.png' %>
+           </div>
+           <div>
+             <div class="text">
+               <h2 class="hidden">DISCOVER THE UNSEEN, THE LESS TRAVELLED</h2>
+               <div class="innertext hidden">
+                 <p>Unforgetable experience to grasp all that Saigon has to offer:</p>
+                 <p>heritage, culture, food, nightlife and much more</p>
+               </div>
+             </div>
+             <%= image_tag '1-2-1024x682-1024x683.png' %>
+           </div>
+        </div>
+
+        <%= yield %>
+      </div>
+
+    </div>
+
   </body>
 </html>

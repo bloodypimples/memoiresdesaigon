@@ -13,3 +13,41 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery
+//= require jquery_ujs
+$(document).ready(function(){
+
+  var fixed_point = 150
+
+  $(window).scroll(function(){
+    if($(window).scrollTop() > fixed_point){
+      $('.nav').addClass('fixed')
+    }else{
+      $('.nav').removeClass('fixed')
+    }
+  })
+
+  $("#slideshow > div").hide();
+
+  $('#slideshow > div:first').fadeIn(2000, function(){
+    $("#slideshow > div:first > .text > h2").toggleClass('hidden');
+    setTimeout(function(){
+      $("#slideshow > div:first > .text > .innertext").toggleClass('hidden');
+    }, 1500)
+  });
+
+  setInterval(function() {
+    $('#slideshow > div:first')
+      .fadeOut(2000)
+      .next()
+      .fadeIn(2000, function(){
+        $("#slideshow > div > .text > h2").toggleClass('hidden');
+        setTimeout(function(){
+          $("#slideshow > div > .text > .innertext").toggleClass('hidden');
+        }, 1500)
+      })
+      .end()
+      .appendTo('#slideshow');
+  }, 8000);
+
+})
