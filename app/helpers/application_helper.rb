@@ -27,7 +27,7 @@ module ApplicationHelper
   end
 
   def get_temp
-    @weather = Weather.lookup_by_location('HANOI, VIETNAM', Weather::Units::CELSIUS)
+    @weather = Weather.lookup_by_location('HO CHI MINH CITY, VIETNAM', Weather::Units::CELSIUS)
     @temp = @weather.condition.temp.to_s + "°C"
   end
 end

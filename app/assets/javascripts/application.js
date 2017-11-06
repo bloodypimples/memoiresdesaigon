@@ -59,4 +59,12 @@ $(document).ready(function(){
   })
 
   $('.datepicker').datepicker();
+
+  $('.room').mouseenter(function(e){
+    $(this).addClass('hovered');
+  })
+
+  $('.room').mouseleave(function(){
+    $(this).removeClass('hovered');
+  })
 })

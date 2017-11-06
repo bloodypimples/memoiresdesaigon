@@ -125,3 +125,35 @@
     </div>
   </div>
 </div>
+
+<div class="row rooms">
+  <% 4.times do %>
+    <%= render 'room' %>
+  <% end %>
+</div>
+
+<div class="row indulge">
+  <h2>INDULGE IN THE VERY HEART OF SAIGON</h2>
+  <div class="seperator"></div>
+  <p>
+    Travel in style as far as your desire goes.
+  </p>
+  <p>
+    Feel like home in our mini studios, feel loved in romantic suits or be wild with our friendly capsules.
+  </p>
+</div>
+
+<div class="row event">
+  <div class="heading">
+    <div class="content-wrapper">
+      <h2>EVENTS</h2>
+      <div class="seperator"></div>
+      <p>Life is too short for boredom. Explore these upcoming special events in Saigon that you wouldn’t want to be missing out on.</p>
+    </div>
+  </div>
+  <div class="events">
+    <% 2.times do %>
+      <%= render 'event' %>
+    <% end %>
+  </div>
+</div>

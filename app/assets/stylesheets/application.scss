@@ -557,6 +557,16 @@ body > .wrapper{
 }
 
 #slideshow > div {
+  &:after{
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1,1,1,.3);
+  }
   position: absolute;
   top: 0px;
   left: 0px;
@@ -578,9 +588,9 @@ body > .wrapper{
     position: relative;
     z-index: 1;
     color: white;
-    transition: all 300ms ease;
+    transition: all 500ms ease;
     h2, .innertext{
-      transition: all 300ms ease;
+      transition: all 500ms ease;
       transform: scale(1);
       opacity: 1;
       color: white;
@@ -598,6 +608,23 @@ body > .wrapper{
     }
   }
 }
+.cta{
+  font-size: 14px;
+  position: absolute;
+  bottom: 40px;
+  display: inline-block;
+  font-family: $heading;
+  color: $gold;
+  padding: 10px 20px;
+  display: inline-block;
+  border: 2px solid $gold;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover{
+    background-color: $gold;
+    color: white;
+  }
+}
 .exit{
   font-size: 50px;
   color: $denim;
@@ -610,6 +637,39 @@ body > .wrapper{
   cursor: pointer;
 }
 .row{
+  &.indulge{
+    text-align: center;
+    padding: 60px 0px 100px;
+    overflow: hidden;
+    background-color: $denim;
+    position: relative;
+    &:after{
+      display: block;
+      content: " ";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background-image: url("/assets/logo-04.png");
+      z-index: 1;
+    }
+    h2{
+      position: relative;
+      color: $gold;
+      z-index: 2;
+    }
+    p{
+      position: relative;
+      color: white;
+      z-index: 2;
+    }
+    .seperator{
+      position: relative;
+      background-color: $gold;
+      z-index: 2;
+    }
+  }
   background-color: white;
   overflow: hidden;
   &:after{
@@ -620,11 +680,86 @@ body > .wrapper{
   &.introduction{
     display: flex;
   }
+  &.rooms{
+    display: flex;
+    .room{
+      &:hover{
+        .cta{
+          background-color: $gold;
+          color: white;
+        }
+        &:after{
+          opacity: 0.5;
+        }
+      }
+      &:after{
+        display: block;
+        content: " ";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: $gold;
+        opacity: 0;
+        transition: all 300ms ease;
+      }
+      width: 25%;
+      position: relative;
+      min-height: 500px;
+      display: flex;
+      text-align: center;
+      cursor: pointer;
+      &.hovered{
+        .text{
+          h2{
+            top: 60px;
+          }
+          p{
+            opacity: 1;
+          }
+        }
+      }
+      .text{
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h2{
+          font-size: 20px;
+          line-height: 1;
+          position: absolute;
+          top: calc(50% - 20px);
+          margin: 0px;
+          transition: all 500ms ease;
+        }
+        p{
+          font-size: 20px;
+          opacity: 0;
+          transition: all 500ms ease;
+        }
+      }
+      .image{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 }
 .seperator{
   width: 100px;
   height: 2px;
-  display: block;
+  display: inline-block;
   background-color: $denim;
   margin: 20px 0px;
 }
@@ -736,7 +871,80 @@ svg{
     font-family: $heading;
   }
 }
+.row.event{
+  display: flex;
+  .heading{
+    position: relative;
+    width: 33.33%;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: $gold;
+    p{
+      color: white;
+      margin-top: 20px;
+    }
+    &:after{
+      display: block;
+      content: " ";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background-image: url("/assets/logo-03.png");
+      background-size: cover;
+    }
+    .content-wrapper{
+      position: relative;
+      z-index: 1;
+    }
+  }
+  .events{
+    width: 66.66%;
+    .event{
+      width: 100%;
+      padding: 25px;
+      box-sizing: border-box;
+      h2{
+        font-size: 20px;
+        margin-top: 0px;
+      }
+      p{
+        font-size: 20px;
+      }
+      .title{
+        display: flex;
+        .time{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-right: 10px;
+          border: 1px solid $gold;
+          padding: 10px;
+          color: $gold;
+          .date{
+            font-size: 40px;
+          }
+        }
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
 @media(max-width: 1000px){
+  .row.event{
+    .heading{
+      width: 100%;
+    }
+    .events{
+      width: 100%;
+    }
+  }
+  .row.rooms{
+    .room{
+      width: 100%;
+    }
+  }
   .infos{
     .info{
       width: 30%;
@@ -776,7 +984,7 @@ svg{
       box-sizing: border-box;
       padding-left: 20px;
       padding-top: 60px;
-      transition: all 300ms ease;
+      transition: all 500ms ease;
       a{
         color: $denim;
         text-shadow: none;
