@@ -722,7 +722,7 @@ body > .wrapper{
       }
       .text{
         position: relative;
-        z-index: 1;
+        z-index: 2;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -799,6 +799,54 @@ svg{
   justify-content: space-between;
   margin-top: 50px;
   .info{
+    position: relative;
+    &:hover{
+      .date-picker{
+        display: block;
+        z-index: 99;
+      }
+      .number-picker{
+        display: flex;
+        z-index: 99;
+      }
+    }
+    &.departure{
+      .date-picker{
+        left: -25%;
+      }
+    }
+    .number-picker{
+      position: absolute;
+      width: 100%;
+      top: 80%;
+      left: 0px;
+      background-color: white;
+      border: 1px solid rgba(1,1,1,.1);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      font-family: $heading;
+      box-sizing: border-box;
+      display: none;
+      > div{
+        padding: 5px 30px;
+        margin: 10px 0px;
+        background-color: white;
+        border: 1px solid rgba(1,1,1,.1);
+        cursor: pointer;
+        &:hover, &.active{
+          background-color: $denim;
+          color: white;
+        }
+      }
+    }
+    .date-picker{
+      position: absolute;
+      top: 80%;
+      left: 0px;
+      display: none;
+    }
     h2{
       font-size: 24px;
     }
@@ -1044,6 +1092,21 @@ svg{
       }
     }
   }
+}
+.ui-widget{
+  font-family: $heading;
+  color: $denim;
+}
+.ui-widget-header{
+  color: $gold;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+  color: $denim;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+  color: white;
+  background-color: $denim;
+  border: 0px;
 }
 @media(max-width: 1000px){
   .footer{

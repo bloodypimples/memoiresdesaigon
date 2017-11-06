@@ -15,6 +15,23 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
+function set_booking_form(){
+  var arrival_timestamp = $('#reservation_arrival_date').attr('value')
+  var departure_timestamp = $('#reservation_departure_date').attr('value')
+  var guests = $('#reservation_guests').attr('value')
+  var arrival_time_object = new Date(parseInt(arrival_timestamp))
+  var departure_time_object = new Date(parseInt(departure_timestamp))
+  $('.arrival .month').html(monthNames[arrival_time_object.getMonth()])
+  $('.departure .month').html(monthNames[departure_time_object.getMonth()])
+  $('.arrival .date').html(arrival_time_object.getDate())
+  $('.departure .date').html(departure_time_object.getDate())
+  $('.guests .people').html(guests)
+}
+
+var monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
 $(document).ready(function(){
 
   var fixed_point = 150
@@ -58,7 +75,27 @@ $(document).ready(function(){
     $('.nav > .items').toggleClass('revealed');
   })
 
-  $('.datepicker').datepicker();
+  $('#arrival_date_picker').datepicker({
+    onSelect: function() {
+        var dateObject = $(this).datepicker('getDate')
+        var timestamp = new Date(dateObject).getTime()
+        var departure_timestamp = $('#reservation_departure_date').attr('value')
+        $('#reservation_arrival_date').attr('value', timestamp)
+        if(timestamp > departure_timestamp){
+            $('#reservation_departure_date').attr('value', timestamp + 86400 * 1000)
+        }
+        set_booking_form()
+    }
+  });
+
+  $('#departure_date_picker').datepicker({
+    onSelect: function() {
+        var dateObject = $(this).datepicker('getDate')
+        var timestamp = new Date(dateObject).getTime()
+        $('#reservation_departure_date').attr('value', timestamp)
+        set_booking_form()
+    }
+  });
 
   $('.room').mouseenter(function(e){
     $(this).addClass('hovered');
@@ -78,4 +115,18 @@ $(document).ready(function(){
       .end()
       .appendTo('#gallery');
   },  3000);
+
+  $('.reservation.submit').click(function(){
+    $('.simple_form.reservation').submit()
+  })
+
+  set_booking_form()
+
+  $('.date-picker').datepicker()
+
+  $('.number-picker > div').click(function(){
+    var number = $(this).attr('value')
+    $('#reservation_guests').attr('value', number)
+    set_booking_form()
+  })
 })

@@ -60,3 +60,5 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'weather-api', '~> 1.4'
 
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+
+gem 'simple_form', '~> 3.5'
