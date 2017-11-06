@@ -27,27 +27,27 @@ $(document).ready(function(){
     }
   })
 
-  $("#slideshow > div").hide();
+  $(".slideshow > div").hide();
 
-  $('#slideshow > div:first').fadeIn(2000, function(){
-    $("#slideshow > div:first > .text > h2").toggleClass('hidden');
+  $('.slideshow > div:first').fadeIn(2000, function(){
+    $(".slideshow > div:first > .text > h2").toggleClass('hidden');
     setTimeout(function(){
-      $("#slideshow > div:first > .text > .innertext").toggleClass('hidden');
+      $(".slideshow > div:first > .text > .innertext").toggleClass('hidden');
     }, 1500)
   });
 
   setInterval(function() {
-    $('#slideshow > div:first')
+    $('.slideshow > div:first')
       .fadeOut(2000)
       .next()
       .fadeIn(2000, function(){
-        $("#slideshow > div > .text > h2").toggleClass('hidden');
+        $(".slideshow > div > .text > h2").toggleClass('hidden');
         setTimeout(function(){
-          $("#slideshow > div > .text > .innertext").toggleClass('hidden');
+          $(".slideshow > div > .text > .innertext").toggleClass('hidden');
         }, 1500)
       })
       .end()
-      .appendTo('#slideshow');
+      .appendTo('.slideshow');
   }, 8000);
 
   $('.hamburger').click(function(){
@@ -67,4 +67,15 @@ $(document).ready(function(){
   $('.room').mouseleave(function(){
     $(this).removeClass('hovered');
   })
+
+  $("#gallery > div:gt(0)").hide();
+
+  setInterval(function() {
+    $('#gallery > div:first')
+      .fadeOut(1000)
+      .next()
+      .fadeIn(1000)
+      .end()
+      .appendTo('#gallery');
+  },  3000);
 })

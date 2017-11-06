@@ -550,13 +550,13 @@ body > .wrapper{
   }
 }
 
-#slideshow {
+.slideshow {
   position: relative;
   width: 100%;
   height: 700px;
 }
 
-#slideshow > div {
+.slideshow > div {
   &:after{
     content: " ";
     display: block;
@@ -931,7 +931,74 @@ svg{
     }
   }
 }
+.row.gallery{
+  background-color: $denim;
+  h2{
+    color: $gold;
+  }
+  .seperator{
+    background-color: $gold;
+    margin: 20px 0px 40px;
+  }
+  p{
+    color: white;
+  }
+  &:after{
+    display: block;
+    content: " ";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/logo-04.png");
+    background-size: cover;
+  }
+  position: relative;
+  .content-wrapper{
+    position: relative;
+    z-index: 1;
+    display: flex;
+  }
+  .heading{
+    width: 33.33%;
+    padding: 20px;
+    box-sizing: border-box;
+    order: 2;
+  }
+  #gallery{
+    width: 66.66%;
+    height: 500px;
+    order: 1;
+    position: relative;
+    div{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
 @media(max-width: 1000px){
+  .row.gallery{
+    .content-wrapper{
+      flex-direction: column;
+      .heading{
+        width: 100%;
+        order: 1;
+      }
+      #gallery{
+        width: 100%;
+        order: 2;
+      }
+    }
+  }
   .row.event{
     .heading{
       width: 100%;
