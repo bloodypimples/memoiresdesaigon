@@ -3,27 +3,29 @@ module ApplicationHelper
     "active" if current_page?(path)
   end
 
-  Now = Time.zone.now
-  Tomorrow = 1.day.from_now
-
   def get_time
-    Now.strftime("%I:%M %p")
+    $Now = Time.zone.now
+    $Now.strftime("%I:%M %p")
   end
 
   def get_arrival_month
-    Now.strftime("%B")
+    $Now = Time.zone.now
+    $Now.strftime("%B")
   end
 
   def get_arrival_date
-    Now.strftime("%d")
+    $Now = Time.zone.now
+    $Now.strftime("%d")
   end
 
   def get_departure_month
-    Tomorrow.strftime("%B")
+    $Tomorrow = 1.day.from_now
+    $Tomorrow.strftime("%B")
   end
 
   def get_departure_date
-    Tomorrow.strftime("%d")
+    $Tomorrow = 1.day.from_now
+    $Tomorrow.strftime("%d")
   end
 
   def get_temp
