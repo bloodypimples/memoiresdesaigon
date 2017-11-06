@@ -80,11 +80,14 @@ $(document).ready(function(){
         var dateObject = $(this).datepicker('getDate')
         var timestamp = new Date(dateObject).getTime()
         var departure_timestamp = $('#reservation_departure_date').attr('value')
+        var departure_date_object = new Date(parseInt(departure_timestamp))
         $('#reservation_arrival_date').attr('value', timestamp)
-        if(timestamp > departure_timestamp){
+        if(dateObject.getDate() >= departure_date_object.getDate()){
             $('#reservation_departure_date').attr('value', timestamp + 86400 * 1000)
         }
         set_booking_form()
+        // console.log(dateObject.getDate())
+        // console.log(departure_timestamp)
     }
   });
 
@@ -92,7 +95,12 @@ $(document).ready(function(){
     onSelect: function() {
         var dateObject = $(this).datepicker('getDate')
         var timestamp = new Date(dateObject).getTime()
+        var arrival_timestamp = $('#reservation_arrival_date').attr('value')
+        var arrival_date_object = new Date(parseInt(arrival_timestamp))
         $('#reservation_departure_date').attr('value', timestamp)
+        if(dateObject.getDate() <= arrival_date_object.getDate()){
+            $('#reservation_arrival_date').attr('value', timestamp - 86400 * 1000)
+        }
         set_booking_form()
     }
   });

@@ -62,3 +62,7 @@ gem 'weather-api', '~> 1.4'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 
 gem 'simple_form', '~> 3.5'
+
+gem 'activeadmin', '~> 1.1'
+
+gem 'paperclip', '~> 5.1'
