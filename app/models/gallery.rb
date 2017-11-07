@@ -1,4 +1,4 @@
 class Gallery < ApplicationRecord
-  has_many :gallery_images
-  belongs_to :room, dependent: :destroy
+  has_many :gallery_images, dependent: :destroy
+  belongs_to :room
 end
