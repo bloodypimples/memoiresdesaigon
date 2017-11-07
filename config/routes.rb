@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root "pages#home"
-  get 'stay', to: "pages#stay"
+  get 'stay', to: "rooms#index"
   get 'explore', to: "pages#explore"
   get 'share', to: "pages#share"
   get 'contact', to: "pages#contact"

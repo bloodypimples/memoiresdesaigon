@@ -1242,7 +1242,24 @@ form{
     width: 33.33%;
   }
 }
+.row.introduction{
+  .col{
+    box-sizing: border-box;
+    padding: 80px;
+  }
+}
+.row.rooms.grid{
+  flex-wrap: wrap;
+  a{
+    width: 50%;
+  }
+}
 @media(max-width: 1000px){
+  .row.rooms.grid{
+    a{
+      width: 100%;
+    }
+  }
   .hero{
     padding: 0px;
     display: flex;
@@ -1366,6 +1383,11 @@ form{
   }
 }
 @media(max-width: 700px){
+  .row.introduction{
+    .col{
+      padding: 20px;
+    }
+  }
   .row.amenities{
     .col{
       &.introduction, &.amenities{

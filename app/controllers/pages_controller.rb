@@ -3,9 +3,6 @@ class PagesController < ApplicationController
     @rooms = Room.all.order('created_at desc')
   end
 
-  def stay
-  end
-
   def explore
   end
 
