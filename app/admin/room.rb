@@ -11,7 +11,7 @@ ActiveAdmin.register Room do
     actions
   end
 
-  form title: 'A custom title' do |f|
+  form title: 'New room' do |f|
     inputs 'Details' do
       input :name
       input :rate

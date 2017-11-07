@@ -190,39 +190,17 @@
       </p>
     </div>
     <div id="gallery">
-      <div>
-        <img src="/assets/g11.jpg">
-      </div>
-      <div>
-        <img src="/assets/g10.jpg">
-      </div>
-      <div>
-        <img src="/assets/g9.jpg">
-      </div>
-      <div>
-        <img src="/assets/g8.jpg">
-      </div>
-      <div>
-        <img src="/assets/g7.jpg">
-      </div>
-      <div>
-        <img src="/assets/g6.jpg">
-      </div>
-      <div>
-        <img src="/assets/g5.jpg">
-      </div>
-      <div>
-        <img src="/assets/g4.jpg">
-      </div>
-      <div>
-        <img src="/assets/g3.jpg">
-      </div>
-      <div>
-        <img src="/assets/g2.jpg">
-      </div>
-      <div>
-        <img src="/assets/g1.jpg">
-      </div>
+      <% @gallery_images.each do |gallery_image| %>
+        <div>
+          <img src="<%= gallery_image.image.url %>">
+        </div>
+      <% end %>
     </div>
   </div>
+</div>
+
+<div class="row rooms show_page">
+  <% @rooms.each do |room| %>
+    <%= render 'pages/room', room: room if room != @room %>
+  <% end %>
 </div>
