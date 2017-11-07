@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @rooms = Room.all.order('created_at desc')
   end
 
   def stay

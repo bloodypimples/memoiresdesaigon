@@ -614,6 +614,8 @@ body > .wrapper{
   font-family: $heading;
   color: $gold;
   padding: 10px 20px;
+  left: 50%;
+  transform: translateX(-50%);
   display: inline-block;
   border: 2px solid $gold;
   border-radius: 5px;
@@ -680,7 +682,11 @@ body > .wrapper{
   }
   &.rooms{
     display: flex;
-    .room{
+    a{
+      text-decoration: none;
+      .room{
+          display: flex;
+      }
       &:hover{
         .cta{
           background-color: $gold;
@@ -730,10 +736,15 @@ body > .wrapper{
           line-height: 1;
           position: absolute;
           top: calc(50% - 20px);
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100%;
           margin: 0px;
           transition: all 500ms ease;
+          color: white;
         }
         p{
+          color: white;
           font-size: 20px;
           opacity: 0;
           transition: all 500ms ease;
@@ -745,6 +756,16 @@ body > .wrapper{
         left: 0px;
         width: 100%;
         height: 100%;
+        &:after{
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          height: 100%;
+          content: " ";
+          z-index: 1;
+          background-color: rgba(1,1,1,.3);
+        }
         img{
           width: 100%;
           height: 100%;
@@ -765,11 +786,11 @@ body > .wrapper{
   width: 50%;
   float: left;
   &.introduction{
-    padding: 0px 80px;
+    padding: 100px 80px;
     box-sizing: border-box;
   }
   &.booking{
-    padding: 0px 80px;
+    padding: 100px 80px;
     box-sizing: border-box;
     background-color: rgba(1,1,1,.1);
   }
@@ -1121,6 +1142,24 @@ svg{
   height: 500px;
   background-color: $denim;
   width: 100%;
+  h2{
+    position: relative;
+    z-index: 2;
+    color: white;
+  }
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0px 100px;
+}
+.shade{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1,1,1,.3);
+  z-index: 1;
 }
 .sign_in{
   .hero{
@@ -1151,7 +1190,68 @@ form{
     }
   }
 }
+.rate{
+  width: 100%;
+  border: 1px solid rgba(1,1,1,.1);
+  margin-top: 50px;
+  padding: 35px;
+  box-sizing: border-box;
+  text-align: right;
+  span{
+    color: $gold;
+    font-size: 48px;
+    margin-right: 10px;
+  }
+  font-family: $heading;
+  color: $denim;
+}
+.row.amenities{
+  display: flex;
+  .col{
+    width: 50%;
+    &.introduction{
+      background-color: $gold;
+      box-sizing: border-box;
+      padding: 100px;
+      p{
+        color: white;
+      }
+    }
+    &.amenities{
+      box-sizing: border-box;
+      padding: 100px;
+      .row{
+        display: flex;
+        .amenity{
+          width: 50%;
+          margin-bottom: 50px;
+          .name{
+            font-family: $heading;
+          }
+          .value{
+            font-family: $normal;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
 @media(max-width: 1000px){
+  .hero{
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .row.amenities{
+    .col{
+      width: 100%;
+      .row{
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
   .footer{
     .content-wrapper{
       flex-direction: column;
@@ -1187,8 +1287,9 @@ form{
     }
   }
   .row.rooms{
-    .room{
+    a{
       width: 100%;
+      position: relative;
     }
   }
   .infos{
@@ -1260,6 +1361,13 @@ form{
   }
 }
 @media(max-width: 700px){
+  .row.amenities{
+    .col{
+      &.introduction, &.amenities{
+        padding: 20px;
+      }
+    }
+  }
   h2{
     font-size: 38px;
   }

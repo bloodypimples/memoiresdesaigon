@@ -102,11 +102,11 @@ $(document).ready(function(){
     }
   });
 
-  $('.room').mouseenter(function(e){
+  $('.rooms > a').mouseenter(function(e){
     $(this).addClass('hovered');
   })
 
-  $('.room').mouseleave(function(){
+  $('.rooms > a').mouseleave(function(){
     $(this).removeClass('hovered');
   })
 
