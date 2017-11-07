@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require_tree .
+//= require_directory .
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
@@ -86,8 +86,6 @@ $(document).ready(function(){
             $('#reservation_departure_date').attr('value', timestamp + 86400 * 1000)
         }
         set_booking_form()
-        // console.log(dateObject.getDate())
-        // console.log(departure_timestamp)
     }
   });
 
