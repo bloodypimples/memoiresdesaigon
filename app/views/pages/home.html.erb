@@ -155,8 +155,8 @@
     </div>
   </div>
   <div class="events">
-    <% 2.times do %>
-      <%= render 'event' %>
+    <% @events.each do |event| %>
+      <%= render 'event', event: event %>
     <% end %>
   </div>
 </div>

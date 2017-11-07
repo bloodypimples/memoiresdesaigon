@@ -50,4 +50,19 @@ module ApplicationHelper
     @weather = Weather.lookup_by_location('HO CHI MINH CITY, VIETNAM', Weather::Units::CELSIUS)
     @temp = @weather.condition.temp.to_s + "°C"
   end
+
+  def get_event_date(event)
+    $date_object = Time.parse(event.date)
+    $date_object.strftime("%d")
+  end
+
+  def get_event_month(event)
+    $date_object = Time.parse(event.date)
+    $date_object.strftime("%B")
+  end
+
+  def get_event_date_with_suffix(event)
+    $date_object = Time.parse(event.date)
+    $date_object.day.ordinalize
+  end
 end

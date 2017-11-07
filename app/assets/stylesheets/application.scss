@@ -1,6 +1,7 @@
 /*
  *= require jquery-ui
  */
+ //= require active_admin/editor/wysiwyg
 @import url('https://fonts.googleapis.com/css?family=Allura|Marko+One');
 $gold: #967a50;
 $denim: #0f2453;
@@ -16,6 +17,9 @@ p{
   font-size: 28px;
   margin: 0px;
   color: $denim;
+}
+a{
+  color: $gold;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -1147,8 +1151,16 @@ svg{
     z-index: 2;
     color: white;
   }
+  p{
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 40px;
+  }
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   padding: 0px 100px;
 }
@@ -1254,7 +1266,23 @@ form{
     width: 50%;
   }
 }
+.event.show.wrapper{
+  .content{
+    background-color: white;
+    overflow: hidden;
+    h2{
+      text-transform: uppercase;
+    }
+    box-sizing: border-box;
+    padding: 80px;
+  }
+}
 @media(max-width: 1000px){
+  .event.show.wrapper{
+    .content{
+      padding: 20px;
+    }
+  }
   .row.rooms.grid{
     a{
       width: 100%;

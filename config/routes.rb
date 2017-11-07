@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   post "signin", to: "sessions#create"
   get "signout", to: "sessions#delete"
   get "rooms/:id", to: "rooms#show", as: "room"
+  get "events/:id", to: "events#show", as: "event"
 end

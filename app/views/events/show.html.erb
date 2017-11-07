@@ -1,0 +1,28 @@
+<div class="event show wrapper">
+  <div class="hero">
+    <div class="shade"></div>
+    <img src="<%= @event.image.url(:hero) %>">
+    <h2><%= @event.name %></h2>
+    <p><%= get_event_month(@event) + " " + get_event_date_with_suffix(@event) %></p>
+  </div>
+
+  <div class="content">
+    <h2>Information</h2>
+    <p><%=raw @event.body %></p>
+  </div>
+
+  <div class="row event">
+    <div class="heading">
+      <div class="content-wrapper">
+        <h2>MORE EVENTS</h2>
+        <div class="seperator"></div>
+        <p>Because once is all you are going to live!</p>
+      </div>
+    </div>
+    <div class="events">
+      <% @events.each do |event| %>
+        <%= render 'pages/event', event: event %>
+      <% end %>
+    </div>
+  </div>
+</div>

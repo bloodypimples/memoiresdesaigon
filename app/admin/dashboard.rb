@@ -11,19 +11,54 @@ ActiveAdmin.register_page "Dashboard" do
     # end
 
     columns do
-      # column do
-      #   panel "Recent Products" do
-      #     ul do
-      #       Product.last(5).map do |product|
-      #         li link_to(product.name, admin_product_path(product))
-      #       end
-      #     end
-      #   end
-      # end
-
       column do
         panel "Info" do
           para "Welcome to Memoires de Saigon admin lounge."
+        end
+      end
+    end
+
+    columns do
+      column do
+        panel "Recent Rooms" do
+          ul do
+            Room.last(5).map do |room|
+              li link_to(room.name, admin_room_path(room))
+            end
+          end
+        end
+      end
+
+      column do
+        panel "Recent Galleries" do
+          ul do
+            Gallery.last(5).map do |g|
+              li link_to(g.name, admin_gallery_path(g))
+            end
+          end
+        end
+      end
+
+      column do
+        panel "Recent Gallery Images" do
+          ul do
+            GalleryImage.last(5).map do |gi|
+              li link_to(gi.image_file_name, admin_gallery_image_path(gi))
+            end
+          end
+        end
+      end
+    end
+
+    columns do
+
+      column do
+        panel "Recent Events" do
+          ul do
+            Event.last(5).map do |e|
+              li link_to(e.name, admin_event_path(e))
+            end
+          end
         end
       end
     end

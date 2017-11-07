@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
     @rooms = Room.all.order('created_at desc')
+    @events = Event.all.limit(2).order("created_at desc")
   end
 
   def explore

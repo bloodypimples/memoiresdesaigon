@@ -2,17 +2,19 @@
   <div class="title">
     <div class="time">
       <div class="month">
-        December
+        <%= get_event_month(event) %>
       </div>
       <div class="date">
-        24
+        <%= get_event_date(event) %>
       </div>
     </div>
-    <h2>
-      Christmas Potluck Dinner @ Saigon Outcast
-    </h2>
+    <a href='<%= event_path(event) %>' style="text-decoration: none">
+      <h2>
+        <%= event.name %>
+      </h2>
+    </a>
   </div>
   <p>
-    EVERYONE is welcome to Christmas potluck dinner at Saigon Outcast on Saturday, December 24th, for a special evening of eating-too-much and enjoying live acoustic music. In the spirit of potluck, everyone will bring a dish of their choice to share with friends, and with friendly strangers who may become your close friends in the future.
+    <%= event.short_description.first(320) %>...
   </p>
 </div>
