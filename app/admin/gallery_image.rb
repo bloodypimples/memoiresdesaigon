@@ -14,4 +14,8 @@ ActiveAdmin.register GalleryImage do
     input :image
     actions
   end
+
+  action_item :new, only: :show do
+    link_to 'New Image', new_admin_gallery_image_path
+  end
 end
