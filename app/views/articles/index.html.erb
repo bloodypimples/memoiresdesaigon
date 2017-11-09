@@ -3,3 +3,9 @@
   <img src="/assets/IMG_4391a.jpg">
   <h2>Share</h2>
 </div>
+
+<div class="row articles">
+  <% @articles.each do |article| %>
+    <%= render 'article', article: article %>
+  <% end %>
+</div>

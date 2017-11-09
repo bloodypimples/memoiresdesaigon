@@ -3,14 +3,14 @@ ActiveAdmin.register Article do
     article.user = current_user
   end
 
-  permit_params :name, :body, :image, :user_id
+  permit_params :name, :body, :image, :user_id, :description
 
   index do
     selectable_column
     id_column
     column :name
     column :user
-    column :body
+    column :description
     actions
   end
 
@@ -18,6 +18,7 @@ ActiveAdmin.register Article do
     inputs 'Details' do
       input :name
       input :image
+      input :description
       input :body, as: :html_editor
     end
     actions
