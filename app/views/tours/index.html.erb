@@ -1,0 +1,17 @@
+<div class="hero">
+  <div class="shade"></div>
+  <img src="/assets/Ho-Chi-Minh-City-Tours-Pillion-Vespa-Cruising.jpg">
+  <h2>Explore</h2>
+</div>
+
+<div class="row explore introduction">
+  <h2>WELCOME TO BACK OF THE BIKE TOURS</h2>
+  <div class="seperator"></div>
+  <p>Guided Vietnamese Food Tours and City Sights Tours on Motorbikes in Saigon, Vietnam.</p>
+</div>
+
+<div class="row tours">
+  <% @tours.each do |tour| %>
+    <%= render 'partials/tour', tour: tour %>
+  <% end %>
+</div>

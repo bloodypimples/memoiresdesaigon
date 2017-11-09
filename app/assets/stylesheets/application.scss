@@ -1277,6 +1277,114 @@ form{
     padding: 80px;
   }
 }
+.row.explore.introduction{
+  display: block;
+  padding: 80px;
+}
+.tour{
+  position: relative;
+  display: flex;
+  background-color: $denim;
+  .image{
+    position: relative;
+    width: 66.66%;
+    img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      object-fit: cover;
+    }
+  }
+  .text{
+    position: relative;
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 60px 20px;
+    background-image: url("/assets/logo-04.png");
+    background-size: cover;
+    h2{
+      color: $gold;
+      margin-top: 0px;
+    }
+    .seperator{
+      background-color: $gold;
+    }
+    p{
+      color: white;
+      margin-bottom: 20px;
+    }
+    a{
+      .cta{
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        transform: none;
+      }
+    }
+  }
+  &:nth-child(even){
+    .image{
+      order: 2;
+    }
+    .text{
+      order: 1;
+    }
+  }
+}
+.tour.show.wrapper{
+  display: block;
+  .content{
+    background-color: white;
+    overflow: hidden;
+    padding: 80px;
+    box-sizing: border-box;
+    ul{
+      margin-top: 40px;
+      li{
+        font-family: $heading;
+        margin-bottom: 20px;
+        &:last-child{
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+.row.signup{
+  padding: 80px;
+  h2{
+    color: $gold;
+  }
+  .seperator{
+    background-color: $gold;
+  }
+  background-color: $denim;
+  .input{
+    input{
+      width: 100%;
+    }
+  }
+}
+.flash{
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: $heading;
+  margin-bottom: 20px;
+  &#alert{
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+  }
+  &#notice{
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+  }
+}
 @media(max-width: 1000px){
   .event.show.wrapper{
     .content{

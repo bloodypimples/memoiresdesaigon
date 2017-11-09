@@ -1,0 +1,50 @@
+<div class="tour show wrapper">
+  <div class="hero">
+    <div class="shade"></div>
+    <img src="<%= @tour.image.url(:hero) %>">
+    <h2><%= @tour.name %></h2>
+  </div>
+
+  <div class="content">
+    <h2>Information</h2>
+    <div class="seperator"></div>
+    <p><%=raw @tour.body %></p>
+  </div>
+</div>
+
+<div class="row gallery">
+  <div class="content-wrapper">
+    <div class="heading">
+      <h2>GALLERY</h2>
+      <div class="seperator"></div>
+      <p>
+        Photos from this tour.
+      </p>
+    </div>
+    <div id="gallery">
+      <% @gallery_images.each do |gallery_image| %>
+        <div>
+          <img src="<%= gallery_image.image.url %>">
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="row signup" id="signup">
+  <h2>SIGN UP FOR THIS TOUR</h2>
+  <div class="seperator"></div>
+  <% flash.each do |key, value| %>
+    <div class="flash" id="<%= key %>">
+      <%= value %>
+    </div>
+  <% end %>
+  <%= simple_form_for :tour_form, url: tour_form_path do |f| %>
+    <div class="field">
+      <%= f.input :name, placeholder: "Your Name" %>
+      <%= f.input :email, placeholder: "Your Phone Number" %>
+      <%= f.input :phone, placeholder: "Your Email" %>
+    </div>
+    <%= f.submit "Sign Up" %>
+  <% end %>
+</div>

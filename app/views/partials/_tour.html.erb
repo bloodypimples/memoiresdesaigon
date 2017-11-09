@@ -1,0 +1,11 @@
+<div class="tour">
+  <div class="image">
+    <img src="<%= tour.image.url %>">
+  </div>
+  <div class="text">
+    <h2><%= tour.name %></h2>
+    <div class="seperator"></div>
+    <p><%= tour.description %></p>
+    <a href="<%= tour_path(tour) %>"><div class="cta">Read More</div></a>
+  </div>
+</div>

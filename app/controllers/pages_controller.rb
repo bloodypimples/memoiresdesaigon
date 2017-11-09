@@ -4,9 +4,6 @@ class PagesController < ApplicationController
     @events = Event.all.limit(2).order("created_at desc")
   end
 
-  def explore
-  end
-
   def share
   end
 
