@@ -1605,6 +1605,9 @@ form{
     box-sizing: border-box;
     padding: 20px;
     padding-bottom: 40px;
+    a{
+      text-decoration: none;
+    }
     h2{
       color: white;
     }
@@ -1789,6 +1792,11 @@ form{
   }
 }
 @media(max-width: 600px){
+  .hero{
+    h2{
+      text-align: center;
+    }
+  }
   .article .input.text{
     padding: 0px;
   }

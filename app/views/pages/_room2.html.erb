@@ -4,7 +4,7 @@
     <img src="<%= room.image.url(:hero) %>">
   </div>
   <div class="text">
-    <h2><%= room.name %></h2>
+    <a href="<%= room_path(room) %>"><h2><%= room.name %></h2></a>
     <p><%= room.short_description %></p>
     <p>Room size: <%= room.size %></p>
     <p>Bed size: <%= room.bed %></p>
