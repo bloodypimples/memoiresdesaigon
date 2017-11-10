@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post "tours/:id/form", to: "tour_forms#create", as: "tour_form"
   get 'share', to: "articles#index"
   get 'article/:id', to: "articles#show", as: "article"
+  post 'article/:id/comments', to: "comments#create", as: "article_comments"
   get 'contact', to: "pages#contact"
   get 'choose_your_room', to: "pages#choose_your_room"
   post 'choose_your_room', to: "pages#choose_your_room"

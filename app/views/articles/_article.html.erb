@@ -3,7 +3,9 @@
     <img src="<%= article.image.url %>">
   </div>
   <div class="text">
-    <h2><%= article.name %></h2>
+    <h2><%= link_to article.name, article_path(article) %></h2>
+    <p>Posted by: <%= article.user.name %> - <%= article.created_at.strftime("%B %d %Y") %></p>
     <p><%= article.description %></p>
+    <%= link_to "Continue reading", article_path(article), class: "read-more" %>
   </div>
 </div>

@@ -65,4 +65,15 @@ module ApplicationHelper
     $date_object = Time.parse(event.date)
     $date_object.day.ordinalize
   end
+
+  def gravatar_for(email, options: {size: 100})
+    gravatar_id = Digest::MD5::hexdigest(email)
+    size = options[:size]
+    gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}&d=mm"
+    image_tag(gravatar_url, class: "gravatar")
+  end
+
+  def get_articles
+    @articles = Article.last(4)
+  end
 end

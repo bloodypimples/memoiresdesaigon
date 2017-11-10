@@ -51,18 +51,9 @@
           <div class="recent-posts">
             <h2>RECENT</h2>
             <div class="seperator"></div>
-            <p>
-              [VIDEO] HOW VIETNAM’S MALE FASHION HAS CHANGED THROUGH THE DECADES
-            </p>
-            <p>
-              [PHOTOS] TET TRUNG THU CELEBRATIONS IN OLD HANOI
-            </p>
-            <p>
-              [PHOTOS] A WISTFUL REEL OF LIFE IN VIETNAM IN 1989
-            </p>
-            <p>
-              HẺM GEMS: THE GREEN DELIGHT OF PHU YEN’S BÁNH CANH HẸ
-            </p>
+            <% get_articles.each do |article| %>
+              <p><%= article.name %></p>
+            <% end %>
           </div>
         </div>
       </div>

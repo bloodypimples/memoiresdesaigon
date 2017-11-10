@@ -1,2 +1,28 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<div class="article-wrapper">
+  <div class="hero">
+    <div class="shade"></div>
+    <img src="<%= @article.image.url %>">
+    <h2><%= @article.name %></h2>
+  </div>
+
+  <div class="article">
+    <div class="text">
+      <h2><%= link_to @article.name, article_path(@article) %></h2>
+      <p>Posted by: <%= @article.user.name %> - <%= @article.created_at.strftime("%B %d %Y") %></p>
+      <p><%=raw @article.body %></p>
+
+      <div class="comments">
+        <h2 id="comments">Comments</h2>
+        <div class="seperator"></div>
+        <% if @comments.count > 0 %>
+          <% @comments.each do |comment| %>
+            <%= render 'partials/comment', comment: comment %>
+          <% end %>
+        <% else %>
+          <p>There are no comments yet</p>
+        <% end %>
+        <%= render 'partials/comment_form' %>
+      </div>
+    </div>
+  </div>
+</div>

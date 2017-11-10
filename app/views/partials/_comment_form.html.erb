@@ -1,0 +1,16 @@
+<div class="reply" id="reply_form">
+  <h2>Leave a reply</h2>
+  <% flash.each do |key, value| %>
+    <div class="flash" id="<%= key %>">
+      <%= value %>
+    </div>
+  <% end %>
+  <%= simple_form_for :comment, url: article_comments_path do |f| %>
+    <div class="fields">
+      <%= f.input :user_email, placeholder: "Your Email (this will not get published)" %>
+      <%= f.input :user_name, placeholder: "Your Name" %>
+      <%= f.input :body, placeholder: "Your Comment", as: :text %>
+    </div>
+    <%= f.submit "Submit" %>
+  <% end %>
+</div>
