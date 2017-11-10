@@ -1,2 +1,25 @@
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<div class="hero">
+  <div class="shade"></div>
+  <img src="/assets/IMG_4383a.jpg">
+  <h2>CONTACT US</h2>
+</div>
+
+<div class="row contact" id="form">
+  <h2>GET IN TOUCH</h2>
+  <div class="seperator"></div>
+  <% flash.each do |key, value| %>
+    <div class="flash" id="<%= key %>">
+      <%= value %>
+    </div>
+  <% end %>
+  <div class="contact-form">
+    <%= simple_form_for :contact_form, url: contact_path do |f| %>
+      <div class="fields">
+        <%= f.input :name, placeholder: "Your Name" %>
+        <%= f.input :email, placeholder: "Your Email" %>
+        <%= f.input :body, as: :text, placeholder: "Your Message" %>
+      </div>
+      <%= f.submit "Submit" %>
+    <% end %>
+  </div>
+</div>

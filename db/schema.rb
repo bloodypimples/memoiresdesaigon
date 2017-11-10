@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171109115209) do
+ActiveRecord::Schema.define(version: 20171110032514) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,14 @@ ActiveRecord::Schema.define(version: 20171109115209) do
     t.string "user_email"
   end
 
+  create_table "contact_forms", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.string "date"
@@ -62,15 +70,6 @@ ActiveRecord::Schema.define(version: 20171109115209) do
     t.integer "image_file_size"
     t.datetime "image_updated_at"
     t.string "short_description"
-  end
-
-  create_table "forms", force: :cascade do |t|
-    t.string "name"
-    t.string "phone"
-    t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "tour_id"
   end
 
   create_table "galleries", force: :cascade do |t|
