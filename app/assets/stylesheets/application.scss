@@ -1517,6 +1517,18 @@ form{
     }
   }
 }
+.row.maps{
+  width: 100%;
+  height: 400px;
+  position: relative;
+  iframe{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+  }
+}
 @media(max-width: 1000px){
   .event.show.wrapper{
     .content{
