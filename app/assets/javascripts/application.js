@@ -134,4 +134,8 @@ $(document).ready(function(){
     $('#reservation_guests').attr('value', number)
     set_booking_form()
   })
+
+  $('.cta.book-now').click(function(){
+    alert('abc')
+  })
 })

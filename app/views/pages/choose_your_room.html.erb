@@ -6,6 +6,11 @@
   </div>
 
   <div class="body">
+    <%= simple_form_for :reservation, url: choose_your_room_path do |f| %>
+      <%= f.input :arrival_date, as: 'hidden', input_html: {value: $arrival} %>
+      <%= f.input :departure_date, as: 'hidden', input_html: {value: $departure} %>
+      <%= f.input :guests, as: 'hidden', input_html: {value: $guests} %>
+    <% end %>
     <div class="your-stay">
       <h2>YOUR STAY</h2>
       <div class="checkincheckout">
@@ -32,6 +37,13 @@
       <% @rooms.each do |room| %>
         <%= render 'room2', room: room %>
       <% end %>
+      <div class="checkout">
+        <a href="#">
+          <div class="cta">
+            CHECKOUT
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
