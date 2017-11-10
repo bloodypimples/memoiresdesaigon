@@ -11,8 +11,24 @@ class PagesController < ApplicationController
   end
 
   def choose_your_room
-    $arrival = params[:reservation][:arrival_date]
-    $departure = params[:reservation][:departure_date]
-    $guests = params[:reservation][:guests]
+    @rooms = Room.all.order('created_at desc')
+
+    if defined?(params[:reservation][:arrival_date])
+      $arrival = params[:reservation][:arrival_date]
+    else
+      $arrival = Time.now.to_i * 1000
+    end
+
+    if defined?(params[:reservation][:departure_date])
+      $departure = params[:reservation][:departure_date]
+    else
+      $departure =  1.day.from_now.to_i * 1000
+    end
+
+    if defined?(params[:reservation][:guests])
+      $guests = params[:reservation][:guests]
+    else
+      $guests = 1
+    end
   end
 end

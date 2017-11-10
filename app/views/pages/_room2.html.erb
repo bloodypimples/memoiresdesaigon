@@ -1,0 +1,15 @@
+<div class="room2">
+  <div class="hero">
+    <div class="shade"></div>
+    <img src="<%= room.image.url(:hero) %>">
+  </div>
+  <div class="text">
+    <h2><%= room.name %></h2>
+    <p><%= room.short_description %></p>
+    <p>Room size: <%= room.size %></p>
+    <p>Bed size: <%= room.bed %></p>
+    <p>Occupancy: <%= room.occupancy %></p>
+    <P>Price: <span>$<%= room.rate %></span></p>
+    <div class="cta">BOOK NOW</div>
+  </div>
+</div>

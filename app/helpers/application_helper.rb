@@ -76,4 +76,14 @@ module ApplicationHelper
   def get_articles
     @articles = Article.last(4)
   end
+
+  def to_date(timestamp)
+    $date_object = Time.at(timestamp.to_i / 1000)
+    $date_object.strftime("%d")
+  end
+
+  def to_month(timestamp)
+    $date_object = Time.at(timestamp.to_i / 1000)
+    $date_object.strftime("%B")
+  end
 end
