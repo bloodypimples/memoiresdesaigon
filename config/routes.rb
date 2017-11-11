@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'contact_forms/create'
-
   ActiveAdmin.routes(self)
   root "pages#home"
   get 'stay', to: "rooms#index"
@@ -21,4 +19,5 @@ Rails.application.routes.draw do
   get "events/:id", to: "events#show", as: "event"
   get "booking", to: "pages#booking"
   post "booking", to: "pages#booking"
+  post "create_order", to: "booking_forms#create"
 end

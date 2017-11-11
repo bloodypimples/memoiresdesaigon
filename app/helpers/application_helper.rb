@@ -103,9 +103,22 @@ module ApplicationHelper
 
     rooms.each do |room|
       @room = Room.find(room[:room_id])
-      @total_amount = @total_amount + (@room.rate * @total_days)
+      @amount = room[:amount].to_i
+      @total_amount = @total_amount + ((@room.rate * @total_days) * @amount)
     end
 
     @total_amount
+  end
+
+  def get_reserved_rooms(rooms)
+    @string = ''
+
+    rooms.each do |room|
+      @room = Room.find(room[:room_id])
+
+      @string = @string + @room.name + " x#{room[:amount]}. "
+    end
+
+    @string
   end
 end

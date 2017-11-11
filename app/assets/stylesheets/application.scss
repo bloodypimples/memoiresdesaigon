@@ -1665,6 +1665,17 @@ form{
     color: $gold;
   }
 }
+.booking_form{
+  margin-top: 20px;
+  input{
+    border: 1px solid $gold;
+    width: 100%;
+    &[type=submit]{
+      width: auto;
+      padding: 10px 20px;
+    }
+  }
+}
 @media(max-width: 1000px){
   .event.show.wrapper{
     .content{

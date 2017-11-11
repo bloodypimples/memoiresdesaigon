@@ -43,6 +43,20 @@
           <div class="amount">$<%= get_total_amount($arrival, $departure, @reserved_rooms) %></div>
         </div>
       </div>
+
+      <div class="booking_form" id="booking_form">
+        <%= simple_form_for :booking_form, url: create_order_path do |f| %>
+          <%= f.input :checkin, as: :hidden, input_html: {value: $arrival.to_i / 1000} %>
+          <%= f.input :checkout, as: :hidden, input_html: {value: $departure.to_i / 1000} %>
+          <%= f.input :guests, as: :hidden, input_html: {value: $guests} %>
+          <%= f.input :rooms, as: :hidden, input_html: {value: get_reserved_rooms(@reserved_rooms)} %>
+          <h3>CONTACT INFORMATION</h3>
+          <%= f.input :customer_name, placeholder: "Your Name" %>
+          <%= f.input :customer_email, placeholder: "Your Email" %>
+          <%= f.input :customer_phone, placeholder: "Your Phone Number" %>
+          <%= f.submit "Submit" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

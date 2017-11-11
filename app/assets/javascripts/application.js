@@ -95,7 +95,7 @@ $(document).ready(function(){
         var arrival_timestamp = $('#reservation_arrival_date').attr('value')
         var arrival_date_object = new Date(parseInt(arrival_timestamp))
         $('#reservation_departure_date').attr('value', timestamp)
-        if(dateObject.getDate() <= arrival_date_object.getDate()){
+        if(dateObject <= arrival_date_object){
             $('#reservation_arrival_date').attr('value', timestamp - 86400 * 1000)
         }
         set_booking_form()
