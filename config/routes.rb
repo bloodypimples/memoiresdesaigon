@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   get "signout", to: "sessions#delete"
   get "rooms/:id", to: "rooms#show", as: "room"
   get "events/:id", to: "events#show", as: "event"
+  get "booking", to: "pages#booking"
+  post "booking", to: "pages#booking"
 end

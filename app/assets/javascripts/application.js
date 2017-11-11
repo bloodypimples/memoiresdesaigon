@@ -136,6 +136,17 @@ $(document).ready(function(){
   })
 
   $('.cta.book-now').click(function(){
-    alert('abc')
+    var room_id = $(this).attr("room_id");
+    var room_input = $("#reservation_rooms_room_" + room_id + "_amount");
+    var room_input_current_value = parseInt(room_input.attr("value"));
+    var room_input_new_value = room_input_current_value + 1;
+    room_input.attr("value", room_input_new_value);
+    var html = "BOOK MORE (" + room_input_new_value + " SELECTED)"
+    $(this).html(html);
+  })
+
+  $("#checkout").click(function(e){
+    e.preventDefault();
+    $("form").submit();
   })
 })

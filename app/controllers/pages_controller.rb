@@ -1,4 +1,22 @@
 class PagesController < ApplicationController
+  def booking
+    if defined?(params[:reservation][:arrival_date]) && defined?(params[:reservation][:departure_date]) && defined?(params[:reservation][:guests]) && defined?(params[:reservation][:rooms])
+      @arrival = params[:reservation][:arrival_date]
+      @departure = params[:reservation][:departure_date]
+      @guests = params[:reservation][:guests]
+      @rooms = params[:reservation][:rooms]
+      @reserved_rooms = []
+      @rooms.each do |room|
+        @reserved_rooms.push(@rooms[room]) if @rooms[room][:amount].to_i > 0
+      end
+      if @reserved_rooms.length == 0
+        redirect_to choose_your_room_path + "#body", alert: "Please select at least 1 room."
+      end
+    else
+      redirect_to choose_your_room_path + "#body", alert: "Please select at least 1 room."
+    end
+  end
+
   def home
     @rooms = Room.all.order('created_at desc')
     @events = Event.all.limit(2).order("created_at desc")

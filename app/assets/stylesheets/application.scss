@@ -1647,6 +1647,11 @@ form{
     font-size: 30px;
   }
 }
+.cta{
+  &.book-now{
+    user-select: none;
+  }
+}
 @media(max-width: 1000px){
   .event.show.wrapper{
     .content{

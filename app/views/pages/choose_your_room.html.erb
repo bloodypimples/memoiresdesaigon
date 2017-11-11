@@ -5,13 +5,26 @@
     <h2>CHOOSE YOUR ROOM</h2>
   </div>
 
-  <div class="body">
-    <%= simple_form_for :reservation, url: choose_your_room_path do |f| %>
-      <%= f.input :arrival_date, as: 'hidden', input_html: {value: $arrival} %>
-      <%= f.input :departure_date, as: 'hidden', input_html: {value: $departure} %>
-      <%= f.input :guests, as: 'hidden', input_html: {value: $guests} %>
+  <div class="body" id="body">
+    <%= simple_form_for :reservation, url: booking_path do |f| %>
+      <%= f.input :arrival_date, as: :hidden, input_html: {value: $arrival} %>
+      <%= f.input :departure_date, as: :hidden, input_html: {value: $departure} %>
+      <%= f.input :guests, as: :hidden, input_html: {value: $guests} %>
+      <%= f.fields_for :rooms do |f| %>
+        <% @rooms.each do |room| %>
+          <%= f.fields_for "room_#{room.id}" do |f| %>
+            <%= f.input :room_id, as: :hidden, input_html: {value: room.id} %>
+            <%= f.input :amount, as: :hidden, input_html: {value: 0} %>
+          <% end %>
+        <% end %>
+      <% end %>
     <% end %>
     <div class="your-stay">
+      <% flash.each do |key, value| %>
+        <div class="flash" id="<%= key %>">
+          <%= value %>
+        </div>
+      <% end %>
       <h2>YOUR STAY</h2>
       <div class="checkincheckout">
         <div class="checkin time">
@@ -39,7 +52,7 @@
       <% end %>
       <div class="checkout">
         <a href="#">
-          <div class="cta">
+          <div class="cta" id="checkout">
             CHECKOUT
           </div>
         </a>
