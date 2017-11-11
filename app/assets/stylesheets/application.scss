@@ -1195,7 +1195,11 @@ form{
     padding: 10px;
     box-sizing: border-box;
     &[type=submit]{
+      background-color: white;
+      width: auto;
       cursor: pointer;
+      color: $gold;
+      padding: 10px 20px;
     }
   }
 }
