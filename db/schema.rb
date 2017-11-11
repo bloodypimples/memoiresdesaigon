@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171110073833) do
+ActiveRecord::Schema.define(version: 20171111073539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,19 @@ ActiveRecord::Schema.define(version: 20171110073833) do
     t.integer "image_file_size"
     t.datetime "image_updated_at"
     t.string "description"
+  end
+
+  create_table "booking_forms", force: :cascade do |t|
+    t.integer "checkin"
+    t.integer "checkout"
+    t.integer "guests"
+    t.string "rooms"
+    t.string "customer_name"
+    t.string "customer_email"
+    t.integer "customer_phone"
+    t.boolean "paid", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "comments", force: :cascade do |t|

@@ -1527,7 +1527,7 @@ form{
     width: 100%;
   }
 }
-.choose-your-room.wrapper{
+.choose-your-room.wrapper, .booking.wrapper{
   background-color: white;
   overflow: hidden;
   .body{
@@ -1551,7 +1551,7 @@ form{
   }
 }
 .checkincheckout{
-  .time{
+  .row{
     border: 1px solid $gold;
     display: flex;
     flex-direction: column;
@@ -1579,6 +1579,13 @@ form{
       font-family: $normal;
       font-size: 40px;
       color: $gold;
+    }
+    &.total{
+      .amount{
+        font-family: $heading;
+        font-size: 50px;
+        color: $gold;
+      }
     }
   }
 }
@@ -1650,6 +1657,12 @@ form{
 .cta{
   &.book-now{
     user-select: none;
+  }
+}
+.room.row{
+  .room{
+    font-family: $heading;
+    color: $gold;
   }
 }
 @media(max-width: 1000px){

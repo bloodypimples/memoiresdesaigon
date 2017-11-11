@@ -27,19 +27,19 @@
       <% end %>
       <h2>YOUR STAY</h2>
       <div class="checkincheckout">
-        <div class="checkin time">
+        <div class="checkin row">
           <div class="type">CHECK-IN</div>
           <div class="month"><%= to_month($arrival) %></div>
           <div class="date"><%= to_date($arrival) %></div>
         </div>
 
-        <div class="checkout time">
+        <div class="checkout row">
           <div class="type">CHECK-OUT</div>
           <div class="month"><%= to_month($departure) %></div>
           <div class="date"><%= to_date($departure) %></div>
         </div>
 
-        <div class="guests time">
+        <div class="guests row">
           <div class="type">GUEST(S)</div>
           <div class="date"><%= $guests %></div>
         </div>

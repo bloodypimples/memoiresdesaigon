@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  checkin: 
+  checkout: 
+  guests: 
+  rooms: MyString
+  customer_name: MyString
+  customer_email: MyString
+  customer_phone: 
+  paid: false
+
+two:
+  checkin: 
+  checkout: 
+  guests: 
+  rooms: MyString
+  customer_name: MyString
+  customer_email: MyString
+  customer_phone: 
+  paid: false

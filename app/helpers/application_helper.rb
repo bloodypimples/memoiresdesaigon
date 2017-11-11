@@ -39,7 +39,7 @@ module ApplicationHelper
   end
 
   def get_timestamp_now
-    $timestamp = Time.zone.now.to_i * 1000
+    $timestamp = Date.today.to_time.to_i * 1000
   end
 
   def get_timestamp_tomorrow
@@ -85,5 +85,27 @@ module ApplicationHelper
   def to_month(timestamp)
     $date_object = Time.at(timestamp.to_i / 1000)
     $date_object.strftime("%B")
+  end
+
+  def get_room_name(room)
+    @room = Room.find(room[:room_id])
+    @room.name
+  end
+
+  def get_room_amount(room)
+    room[:amount]
+  end
+
+  def get_total_amount(arrival, departure, rooms)
+    @total_days = (departure.to_i - arrival.to_i) / 86400000
+
+    @total_amount = 0
+
+    rooms.each do |room|
+      @room = Room.find(room[:room_id])
+      @total_amount = @total_amount + (@room.rate * @total_days)
+    end
+
+    @total_amount
   end
 end
