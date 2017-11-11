@@ -1676,6 +1676,12 @@ form{
     }
   }
 }
+.completed{
+  background-color: white;
+  h2{
+    color: $gold;
+  }
+}
 @media(max-width: 1000px){
   .event.show.wrapper{
     .content{

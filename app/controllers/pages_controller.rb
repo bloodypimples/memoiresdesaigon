@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+  def completed
+  end
+
   def booking
     if defined?(params[:reservation][:arrival_date]) && defined?(params[:reservation][:departure_date]) && defined?(params[:reservation][:guests]) && defined?(params[:reservation][:rooms])
       @arrival = params[:reservation][:arrival_date]

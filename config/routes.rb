@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   get "booking", to: "pages#booking"
   post "booking", to: "pages#booking"
   post "create_order", to: "booking_forms#create"
+  get "completed", to: "pages#completed"
 end

@@ -1,9 +1,11 @@
 class BookingFormsController < ApplicationController
   def create
     @form = BookingForm.new(booking_form_params)
+    @form.checkin_time = Time.at(@form.checkin).strftime("%b %d, %Y")
+    @form.checkout_time = Time.at(@form.checkout).strftime("%b %d, %Y")
 
     if @form.save
-      redirect_to choose_your_room_path, notice: "Thank you for your reservation, we will get in touch as soon as possbile."
+      redirect_to completed_path
     else
       redirect_to choose_your_room_path, alert: "Please make sure you have filled in every required field."
     end
