@@ -1683,6 +1683,26 @@ form{
   }
 }
 @media(max-width: 1000px){
+  .row.explore.introduction{
+    padding: 20px;
+  }
+  .row.tours{
+    .tour{
+      flex-direction: column;
+      &:nth-child(even){
+        .image{
+          order: 1;
+        }
+      }
+      .image{
+        width: 100%;
+        height: 400px;
+      }
+      .text{
+        width: 100%;
+      }
+    }
+  }
   .event.show.wrapper{
     .content{
       padding: 20px;
@@ -1697,6 +1717,9 @@ form{
     padding: 0px;
     display: flex;
     justify-content: center;
+    h2{
+      text-align: center;
+    }
   }
   .row.amenities{
     .col{
@@ -1816,6 +1839,11 @@ form{
   }
 }
 @media(max-width: 700px){
+  .choose-your-room.wrapper, .booking.wrapper{
+    .body{
+      padding: 20px;
+    }
+  }
   .row.contact{
     padding: 20px;
   }
