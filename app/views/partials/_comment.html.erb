@@ -4,7 +4,7 @@
   </div>
   <div class="text">
     <h3><%= comment.user_name %></h3>
-    <p>Posted at: xxx</p>
+    <p><%= get_comment_time(comment) %></p>
     <p><%= comment.body %></p>
   </div>
 </div>
