@@ -2,6 +2,17 @@ ActiveAdmin.register GalleryImage do
 
   permit_params :gallery_id, :image
 
+  show do
+    attributes_table do
+     row :created_at
+     row :updated_at
+     row :image do |ad|
+       image_tag ad.image.url
+     end
+     row :gallery_id
+   end
+ end
+
   index do
     selectable_column
     id_column
