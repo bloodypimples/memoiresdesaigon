@@ -712,7 +712,11 @@ body > .wrapper{
       flex-grow: 1;
       flex-basis: 0;
       .room{
-          display: flex;
+        display: flex;
+        width: 100%;
+        .text{
+          width: 100%
+        }
       }
       &:hover{
         .cta{
