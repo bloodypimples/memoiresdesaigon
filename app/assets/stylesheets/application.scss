@@ -1714,6 +1714,13 @@ form{
   }
 }
 @media(max-width: 1000px){
+  .nav{
+    .logo{
+      .normal{
+        display: none;
+      }
+    }
+  }
   .tour.show.wrapper .content, .row.signup{
     padding: 20px;
   }
