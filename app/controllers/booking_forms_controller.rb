@@ -6,6 +6,7 @@ class BookingFormsController < ApplicationController
 
     if @form.save
       ReservationMailer.completed(@form).deliver_now
+      ReservationMailer.notify_staff(@form).deliver_now
       redirect_to completed_path
     else
       redirect_to choose_your_room_path, alert: "Please make sure you have filled in every required field."

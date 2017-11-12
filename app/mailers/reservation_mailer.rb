@@ -15,4 +15,15 @@ class ReservationMailer < ApplicationMailer
 
     mail to: @customer_email
   end
+
+  def  notify_staff(form)
+    @customer_name = form.customer_name
+    @customer_email = form.customer_email
+    @checkin_time = form.checkin_time
+    @checkout_time = form.checkout_time
+    @rooms = form.rooms
+    @guests = form.guests
+
+    mail to: 'bloodypimples@live.com'
+  end
 end
