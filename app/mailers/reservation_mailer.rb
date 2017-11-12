@@ -24,6 +24,6 @@ class ReservationMailer < ApplicationMailer
     @rooms = form.rooms
     @guests = form.guests
 
-    mail to: 'bloodypimples@live.com', subject: "New reservation."
+    mail to: 'memoires.saigon@gmail.com', subject: "New reservation."
   end
 end
