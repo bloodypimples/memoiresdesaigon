@@ -6,6 +6,5 @@ class Article < ApplicationRecord
   validates :description, presence: true
   validates :image, presence: true
   validates :body, presence: true
-  belongs_to :article
   has_many :comments
 end
