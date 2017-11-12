@@ -511,8 +511,14 @@ body > .wrapper{
       position: relative;
       height: 80px;
       width: 80px;
-      background-image: url('/assets/logo-04-300x232.png');
+      // background-image: url('/assets/logo-04-300x232.png');
       background-position: 50% 50%;
+      .scrolled{
+        display: block;
+      }
+      .normal{
+        display: none;
+      }
     }
   }
   position: absolute;
@@ -524,13 +530,27 @@ body > .wrapper{
   display: flex;
   justify-content: space-between;
   .logo{
+    display: flex;
+    align-items: center;
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
     position: relative;
     height: 140px;
     width: 140px;
-    background-image: url('/assets/logo-memoires2-300x249.png');
+    // background-image: url('/assets/logo-memoires2-300x249.png');
     background-position: 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
+    .scrolled{
+      display: none;
+    }
+    .normal{
+      display: block;
+    }
   }
   .items{
     margin: 0px;
