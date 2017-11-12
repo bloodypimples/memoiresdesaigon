@@ -13,7 +13,7 @@ class ReservationMailer < ApplicationMailer
     @rooms = form.rooms
     @guests = form.guests
 
-    mail to: @customer_email
+    mail to: @customer_email, subject: "Booking receipt."
   end
 
   def  notify_staff(form)
@@ -24,6 +24,6 @@ class ReservationMailer < ApplicationMailer
     @rooms = form.rooms
     @guests = form.guests
 
-    mail to: 'bloodypimples@live.com'
+    mail to: 'bloodypimples@live.com', subject: "New reservation."
   end
 end
