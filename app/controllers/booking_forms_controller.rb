@@ -5,6 +5,7 @@ class BookingFormsController < ApplicationController
     @form.checkout_time = Time.at(@form.checkout).strftime("%b %d, %Y")
 
     if @form.save
+      ReservationMailer.completed(@form).deliver_now
       redirect_to completed_path
     else
       redirect_to choose_your_room_path, alert: "Please make sure you have filled in every required field."
