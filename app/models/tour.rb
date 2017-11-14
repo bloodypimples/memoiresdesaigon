@@ -4,6 +4,5 @@ class Tour < ApplicationRecord
   validates :name, presence: true
   validates :description, presence: true
   validates :body, presence: true
-  validates :image, presence: true
   has_one :gallery, dependent: :destroy
 end

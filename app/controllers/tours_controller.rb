@@ -6,6 +6,8 @@ class ToursController < ApplicationController
   def show
     @tour = Tour.find(params[:id])
     @gallery = @tour.gallery
-    @gallery_images = @gallery.gallery_images
+    if @gallery
+      @gallery_images = @gallery.gallery_images
+    end
   end
 end

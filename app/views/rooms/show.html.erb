@@ -180,6 +180,7 @@
   </div>
 </div>
 
+<% if @gallery_images %>
 <div class="row gallery">
   <div class="content-wrapper">
     <div class="heading">
@@ -198,6 +199,7 @@
     </div>
   </div>
 </div>
+<% end %>
 
 <div class="row rooms show_page">
   <% @rooms.each do |room| %>
