@@ -71,4 +71,4 @@ gem 'activeadmin', '~> 1.1'
 
 gem 'paperclip', '~> 5.1'
 
-gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
+gem 'ckeditor'

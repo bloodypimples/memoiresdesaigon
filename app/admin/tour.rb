@@ -13,7 +13,7 @@ ActiveAdmin.register Tour do
     inputs 'Details' do
       input :name
       input :description
-      input :body, as: :html_editor
+      input :body
       input :image
     end
     actions

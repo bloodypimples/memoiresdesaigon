@@ -19,7 +19,7 @@ ActiveAdmin.register Article do
       input :name
       input :image
       input :description
-      input :body, as: :html_editor
+      input :body, as: :ckeditor
     end
     actions
   end
