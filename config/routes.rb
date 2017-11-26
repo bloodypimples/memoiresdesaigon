@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'comments/create'
+
   ActiveAdmin.routes(self)
   root "pages#home"
   get 'stay', to: "rooms#index"
