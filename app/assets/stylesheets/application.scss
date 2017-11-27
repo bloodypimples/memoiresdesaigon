@@ -2,24 +2,26 @@
  *= require jquery-ui
  */
 @import url('https://fonts.googleapis.com/css?family=Lato|Raleway');
-$gold: #967a50;
-$denim: #0f2453;
+$primary: #4c7211;
+$primary_shade: #44660f;
+$secondary: #d0a126;
+$secondary_shade: #bb9022;
 $heading: 'Raleway', sans-serif;
 $normal: 'Lato', sans-serif;
 h2{
   font-family: $heading;
   font-size: 48px;
-  color: $denim;
+  color: $secondary;
 }
 p{
   font-family: $normal;
   font-size: 18px;
   margin: 0px;
-  color: $denim;
+  color: $secondary;
   line-height: 1.4;
 }
 a{
-  color: $gold;
+  color: $primary;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -502,8 +504,11 @@ body > .wrapper{
     background-color: white;
     .items{
       a{
-        color: $denim;
+        color: $secondary;
         text-shadow: none;
+        &.active, &:hover{
+          color: $primary;
+        }
       }
     }
     .logo{
@@ -565,7 +570,7 @@ body > .wrapper{
       text-shadow: 0px 0px 1px #000000;
       margin-left: 30px;
       &.active, &:hover{
-        color: $gold;
+        color: $secondary;
         text-decoration: underline;
       }
     }
@@ -616,7 +621,13 @@ body > .wrapper{
       transform: scale(1);
       opacity: 1;
       color: white;
+      letter-spacing: 10px;
+      font-weight: 100;
+      .seperator{
+        background-color: white;
+      }
       p{
+        letter-spacing: normal;
         color: white;
       }
     }
@@ -636,27 +647,27 @@ body > .wrapper{
   bottom: 40px;
   display: inline-block;
   font-family: $heading;
-  color: $gold;
+  color: $primary;
   padding: 10px 20px;
   left: 50%;
   transform: translateX(-50%);
   display: inline-block;
-  border: 2px solid $gold;
+  border: 2px solid $primary;
   border-radius: 5px;
   cursor: pointer;
   &:hover{
-    background-color: $gold;
+    background-color: $primary;
     color: white;
   }
 }
 .exit{
   font-size: 50px;
-  color: $denim;
+  color: $secondary;
   display: none;
 }
 .hamburger{
   font-size: 50px;
-  color: $denim;
+  color: $secondary;
   display: none;
   cursor: pointer;
 }
@@ -665,7 +676,7 @@ body > .wrapper{
     text-align: center;
     padding: 60px 0px 100px;
     overflow: hidden;
-    background-color: $denim;
+    background-color: $secondary;
     position: relative;
     &:after{
       display: block;
@@ -680,7 +691,7 @@ body > .wrapper{
     }
     h2{
       position: relative;
-      color: $gold;
+      color: $primary;
       z-index: 2;
     }
     p{
@@ -690,7 +701,7 @@ body > .wrapper{
     }
     .seperator{
       position: relative;
-      background-color: $gold;
+      background-color: $primary;
       z-index: 2;
     }
   }
@@ -719,7 +730,7 @@ body > .wrapper{
       }
       &:hover{
         .cta{
-          background-color: $gold;
+          background-color: $primary;
           color: white;
         }
         &:after{
@@ -735,7 +746,7 @@ body > .wrapper{
         width: 100%;
         height: 100%;
         z-index: 1;
-        background-color: $gold;
+        background-color: $primary;
         opacity: 0;
         transition: all 300ms ease;
       }
@@ -808,7 +819,7 @@ body > .wrapper{
   width: 100px;
   height: 2px;
   display: inline-block;
-  background-color: $denim;
+  background-color: $secondary;
   margin: 20px 0px;
 }
 .col-6{
@@ -825,7 +836,7 @@ body > .wrapper{
   }
 }
 svg{
-  fill: $gold;
+  fill: $primary;
 }
 .timeandweather{
   margin: 60px 0px;
@@ -885,7 +896,7 @@ svg{
         border: 1px solid rgba(1,1,1,.1);
         cursor: pointer;
         &:hover, &.active{
-          background-color: $denim;
+          background-color: $secondary;
           color: white;
         }
       }
@@ -905,13 +916,13 @@ svg{
       text-align: center;
       position: relative;
       .month{
-        color: $gold;
+        color: $primary;
         font-family: $heading;
         font-size: 20px;
         padding-top: 30px;
       }
       .date, .people{
-        color: $denim;
+        color: $secondary;
         font-family: $heading;
         font-size: 60px;
         margin-top: 40px;
@@ -945,14 +956,14 @@ svg{
   text-align: right;
   .submit{
     font-family: $heading;
-    color: $gold;
+    color: $primary;
     padding: 20px 40px;
     display: inline-block;
-    border: 2px solid $gold;
+    border: 2px solid $primary;
     border-radius: 5px;
     cursor: pointer;
     &:hover{
-      background-color: $gold;
+      background-color: $primary;
       color: white;
     }
   }
@@ -974,7 +985,7 @@ svg{
     width: 33.33%;
     padding: 25px;
     box-sizing: border-box;
-    background-color: $gold;
+    background-color: $primary;
     p{
       color: white;
       margin-top: 20px;
@@ -1020,9 +1031,9 @@ svg{
           flex-direction: column;
           align-items: center;
           margin-right: 10px;
-          border: 1px solid $gold;
+          border: 1px solid $primary;
           padding: 10px;
-          color: $gold;
+          color: $primary;
           .date{
             font-size: 40px;
           }
@@ -1033,12 +1044,12 @@ svg{
   }
 }
 .row.gallery{
-  background-color: $denim;
+  background-color: $secondary;
   h2{
-    color: $gold;
+    color: $primary;
   }
   .seperator{
-    background-color: $gold;
+    background-color: $primary;
     margin: 20px 0px 40px;
   }
   p{
@@ -1099,7 +1110,7 @@ svg{
     background-image: url("/assets/logo-04.png");
     background-size: cover;
   }
-  background-color: $denim;
+  background-color: $secondary;
   padding: 100px 0px;
   .content-wrapper{
     position: relative;
@@ -1121,10 +1132,10 @@ svg{
         }
       }
       h2{
-        color: $gold;
+        color: $primary;
       }
       .seperator{
-        background-color: $gold;
+        background-color: $primary;
       }
       p{
         color: white;
@@ -1140,7 +1151,7 @@ svg{
       &.recent-posts p{
         cursor: pointer;
         &:hover{
-          color: $gold;
+          color: $primary;
           text-decoration: underline;
         }
       }
@@ -1149,17 +1160,17 @@ svg{
 }
 .ui-widget{
   font-family: $heading;
-  color: $denim;
+  color: $secondary;
 }
 .ui-widget-header{
-  color: $gold;
+  color: $primary;
 }
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
-  color: $denim;
+  color: $secondary;
 }
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
   color: white;
-  background-color: $denim;
+  background-color: $secondary;
   border: 0px;
 }
 .hero{
@@ -1174,7 +1185,7 @@ svg{
   }
   position: relative;
   height: 500px;
-  background-color: $denim;
+  background-color: $secondary;
   width: 100%;
   h2{
     position: relative;
@@ -1230,7 +1241,7 @@ form{
       background-color: white;
       width: auto;
       cursor: pointer;
-      color: $gold;
+      color: $primary;
       padding: 10px 20px;
     }
   }
@@ -1243,19 +1254,19 @@ form{
   box-sizing: border-box;
   text-align: right;
   span{
-    color: $gold;
+    color: $primary;
     font-size: 48px;
     margin-right: 10px;
   }
   font-family: $heading;
-  color: $denim;
+  color: $secondary;
 }
 .row.amenities{
   display: flex;
   .col{
     width: 50%;
     &.introduction{
-      background-color: $gold;
+      background-color: $primary;
       box-sizing: border-box;
       padding: 100px;
       p{
@@ -1318,7 +1329,7 @@ form{
 .tour{
   position: relative;
   display: flex;
-  background-color: $denim;
+  background-color: $secondary;
   .image{
     position: relative;
     width: 66.66%;
@@ -1339,11 +1350,11 @@ form{
     background-image: url("/assets/logo-04.png");
     background-size: cover;
     h2{
-      color: $gold;
+      color: $primary;
       margin-top: 0px;
     }
     .seperator{
-      background-color: $gold;
+      background-color: $primary;
     }
     p{
       color: white;
@@ -1391,12 +1402,12 @@ form{
 .row.signup{
   padding: 80px;
   h2{
-    color: $gold;
+    color: $primary;
   }
   .seperator{
-    background-color: $gold;
+    background-color: $primary;
   }
-  background-color: $denim;
+  background-color: $secondary;
   .input{
     input{
       width: 100%;
@@ -1451,7 +1462,7 @@ form{
     }
     h3{
       font-family: $heading;
-      color: $denim;
+      color: $secondary;
     }
   }
   margin: 140px 0px;
@@ -1514,12 +1525,12 @@ form{
     display: block;
     input{
       width: 100%;
-      border: 1px solid $denim;
+      border: 1px solid $secondary;
     }
     textarea.text{
       width: 100%;
       box-sizing: border-box;
-      border: 1px solid $denim;
+      border: 1px solid $secondary;
       display: block;
       margin: 0px;
       height: 200px;
@@ -1543,7 +1554,7 @@ form{
     font-family: $heading;
   }
   input{
-    border: 1px solid $denim;
+    border: 1px solid $secondary;
     width: 100%;
     &[type=submit]{
       width: auto;
@@ -1570,7 +1581,7 @@ form{
     padding: 100px;
     h3{
       font-family: $heading;
-      color: $denim;
+      color: $secondary;
     }
   }
   .rooms{
@@ -1588,7 +1599,7 @@ form{
 }
 .checkincheckout{
   .row{
-    border: 1px solid $gold;
+    border: 1px solid $primary;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1608,19 +1619,19 @@ form{
     .month{
       font-family: $normal;
       font-size: 20px;
-      color: $denim;
+      color: $secondary;
       margin-bottom: 5px;
     }
     .date{
       font-family: $normal;
       font-size: 40px;
-      color: $gold;
+      color: $primary;
     }
     &.total{
       .amount{
         font-family: $heading;
         font-size: 50px;
-        color: $gold;
+        color: $primary;
       }
     }
   }
@@ -1670,7 +1681,7 @@ form{
       margin-top: 20px;
       &:hover{
         background-color: white;
-        color: $gold;
+        color: $primary;
       }
     }
   }
@@ -1698,13 +1709,13 @@ form{
 .room.row{
   .room{
     font-family: $heading;
-    color: $gold;
+    color: $primary;
   }
 }
 .booking_form{
   margin-top: 20px;
   input{
-    border: 1px solid $gold;
+    border: 1px solid $primary;
     width: 100%;
     &[type=submit]{
       width: auto;
@@ -1715,7 +1726,7 @@ form{
 .completed{
   background-color: white;
   h2{
-    color: $gold;
+    color: $primary;
   }
 }
 @media(max-width: 1000px){
@@ -1857,7 +1868,7 @@ form{
       padding-top: 60px;
       transition: all 500ms ease;
       a{
-        color: $denim;
+        color: $secondary;
         text-shadow: none;
         margin: 0px;
         display: block;
