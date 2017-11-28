@@ -47,8 +47,16 @@ module ApplicationHelper
   end
 
   def get_temp
-    @weather = Weather.lookup_by_location('HO CHI MINH CITY, VIETNAM', Weather::Units::CELSIUS)
-    @temp = @weather.condition.temp.to_s + "°C"
+    if Weather.respond_to?(:lookup_by_location)
+      @weather = Weather.lookup_by_location('HO CHI MINH CITY, VIETNAM', Weather::Units::CELSIUS)
+      if @weather.respond_to?(:condition)
+        @temp = @weather.condition.temp.to_s + "°C"
+      else
+        @temp = "28°C"
+      end
+    else
+      @temp = "28°C"
+    end
   end
 
   def get_event_date(event)
