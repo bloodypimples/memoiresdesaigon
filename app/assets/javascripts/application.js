@@ -14,6 +14,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
+function greet(){
+  console.log('hello world!');
+}
+
 function set_booking_form(){
   var arrival_timestamp = $('#reservation_arrival_date').attr('value')
   var departure_timestamp = $('#reservation_departure_date').attr('value')
@@ -49,10 +53,12 @@ $(document).ready(function(){
     $(".slideshow > div:first > .text > h2").toggleClass('hidden');
     setTimeout(function(){
       $(".slideshow > div:first > .text > .innertext").toggleClass('hidden');
+      $(".slideshow > div > .image").toggleClass('colored');
     }, 1500)
   });
 
-  setInterval(function() {
+  slideshow_interval = setInterval(function() {
+    $(".slideshow > div > .image").toggleClass('colored');
     $('.slideshow > div:first')
       .fadeOut(2000)
       .next()
@@ -60,11 +66,12 @@ $(document).ready(function(){
         $(".slideshow > div > .text > h2").toggleClass('hidden');
         setTimeout(function(){
           $(".slideshow > div > .text > .innertext").toggleClass('hidden');
+          $(".slideshow > div > .image").toggleClass('colored');
         }, 1500)
       })
       .end()
       .appendTo('.slideshow');
-  }, 8000);
+  }, 12000);
 
   $('.hamburger').click(function(){
     $('.nav > .items').toggleClass('revealed');

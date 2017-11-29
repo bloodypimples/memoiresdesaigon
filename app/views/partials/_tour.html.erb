@@ -1,11 +1,10 @@
-<div class="tour">
-  <div class="image">
+<div class="article">
+  <div class="hero">
     <img src="<%= tour.image.url %>">
   </div>
   <div class="text">
-    <h2><%= tour.name %></h2>
-    <div class="seperator"></div>
+    <h2><%= link_to tour.name, tour_path(tour) %></h2>
     <p><%= tour.description %></p>
-    <a href="<%= tour_path(tour) %>"><div class="cta">Read More</div></a>
+    <%= link_to "Read more", tour_path(tour), class: "read-more" %>
   </div>
 </div>

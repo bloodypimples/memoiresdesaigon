@@ -603,6 +603,14 @@ body > .wrapper{
   align-items: center;
   justify-content: center;
   text-align: center;
+  .image{
+    filter: grayscale(100%);
+    transition: all 1000ms ease;
+    &.colored{
+      filter: grayscale(0%);
+      transition: all 5000ms ease;
+    }
+  }
   img{
     position: absolute;
     left: 0px;
@@ -1040,6 +1048,28 @@ svg{
         }
         margin-bottom: 20px;
       }
+    }
+  }
+}
+.homepage.wrapper{
+  .row.gallery{
+    background-color: $primary;
+    h2{
+      color: $secondary;
+    }
+    .seperator{
+      background-color: $secondary;
+    }
+    &:after{
+      display: block;
+      content: " ";
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      background-image: url("/assets/logo-03.png");
+      background-size: cover;
     }
   }
 }
@@ -1727,6 +1757,36 @@ form{
   background-color: white;
   h2{
     color: $primary;
+  }
+}
+.slideshow{
+  .text{
+    position: relative;
+    z-index: 4;
+  }
+  .image{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    &:after{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background-color: $primary;
+      opacity: 0.3;
+      content: " ";
+    }
+  }
+}
+.stay.wrapper{
+  .row.introduction{
+    h2{
+      font-size: 36px;
+    }
   }
 }
 @media(max-width: 1000px){

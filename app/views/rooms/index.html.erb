@@ -1,28 +1,54 @@
-<div class="hero">
-  <div class="shade"></div>
-  <img src="/assets/g11.jpg">
-  <h2>Stay</h2>
-</div>
+<div class="stay wrapper">
 
-<div class="row introduction">
-  <div class="col">
-    <h2>SHEER COMFORT</h2>
-    <div class="seperator"></div>
-    <p>
-      The entire premise has been refurbished, featuring air-conditioned rooms with flat screen TVs, refrigerators, comfortable beds and private bathrooms. Mini studios for longer stays are equipped with stoves and kitchen utensils. Facilities are tastefully appointed to our distinctive retro style of old Saigon, offering travel lovers unforgettable memories of Vietnam now and then.
-    </p>
+  <div class="slideshow">
+     <div>
+       <div class="text">
+         <h2 class="hidden">YOUR HOME<br>IMPORTED TO VIETNAM</h2>
+         <div class="innertext hidden">
+           <div class="seperator"></div>
+           <p>You will regret your round-trip ticket</p>
+           <p>As you are all wrapped up in the cosiness of our duvets and laying on the comfiness of our beds</p>
+         </div>
+       </div>
+       <div class="image">
+         <%= image_tag 'n3.JPG' %>
+      </div>
+     </div>
+     <div>
+       <div class="text">
+         <h2 class="hidden">ARMED TO THE TEETH</h2>
+         <div class="innertext hidden">
+           <div class="seperator"></div>
+           <p>With flat screen TVs, air-conditioners, refridgerators, you name it, it's in the room</p>
+         </div>
+       </div>
+       <div class="image">
+         <%= image_tag 'n7.JPG' %>
+      </div>
+     </div>
   </div>
-  <div class="col">
-    <h2>ECONOMY & CONVENIENCE</h2>
-    <div class="seperator"></div>
-    <p>
-      As part of the refurbishment, we have added unique dormitory rooms with fully-partitioned bunk beds to enable budget travelers to travel in style, enjoying maximum comfort and privacy. Wi-Fi and private parking are complimentary for your convenience. Mémoires de Saigon has been welcoming guests since 2015. We are rated 8+ by our guests in most travel forums, especially on key qualities such as location, service and cleanliness.
-    </p>
-  </div>
-</div>
 
-<div class="row rooms grid">
-  <% @rooms.each do |room| %>
-    <%= render 'pages/room', room: room %>
-  <% end %>
+  <div class="row introduction">
+    <div class="col">
+      <h2>SHEER COMFORT</h2>
+      <div class="seperator"></div>
+      <p>
+        The entire premise has been refurbished, featuring air-conditioned rooms with flat screen TVs, refrigerators, comfortable beds and private bathrooms. Mini studios for longer stays are equipped with stoves and kitchen utensils. Facilities are tastefully appointed to our distinctive retro style of old Saigon, offering travel lovers unforgettable memories of Vietnam now and then.
+      </p>
+    </div>
+    <div class="col">
+      <h2>ECONOMY & CONVENIENCE</h2>
+      <div class="seperator"></div>
+      <p>
+        As part of the refurbishment, we have added unique dormitory rooms with fully-partitioned bunk beds to enable budget travelers to travel in style, enjoying maximum comfort and privacy. Wi-Fi and private parking are complimentary for your convenience. Mémoires de Saigon has been welcoming guests since 2015. We are rated 8+ by our guests in most travel forums, especially on key qualities such as location, service and cleanliness.
+      </p>
+    </div>
+  </div>
+
+  <div class="row rooms grid">
+    <% @rooms.each do |room| %>
+      <%= render 'pages/room', room: room %>
+    <% end %>
+  </div>
+
 </div>
