@@ -92,7 +92,8 @@ $(document).ready(function(){
             $('#reservation_departure_date').attr('value', timestamp + 86400 * 1000)
         }
         set_booking_form()
-    }
+    },
+    minDate: 0
   });
 
   $('#departure_date_picker').datepicker({
@@ -106,7 +107,9 @@ $(document).ready(function(){
             $('#reservation_arrival_date').attr('value', timestamp - 86400 * 1000)
         }
         set_booking_form()
-    }
+    },
+    minDate: 1,
+    defaultDate: 1
   });
 
   $('.rooms > a').mouseenter(function(e){
