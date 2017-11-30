@@ -1,6 +1,6 @@
 class ToursController < ApplicationController
   def index
-    @tours = Tour.all.order("created_at desc")
+    # @tours = Tour.all.order("created_at desc")
   end
 
   def show
