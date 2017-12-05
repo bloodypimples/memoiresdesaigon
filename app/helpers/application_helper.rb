@@ -86,12 +86,12 @@ module ApplicationHelper
   end
 
   def to_date(timestamp)
-    $date_object = Time.at(timestamp.to_i / 1000)
+    $date_object = Time.zone.at(timestamp.to_i / 1000)
     $date_object.strftime("%d")
   end
 
   def to_month(timestamp)
-    $date_object = Time.at(timestamp.to_i / 1000)
+    $date_object = Time.zone.at(timestamp.to_i / 1000)
     $date_object.strftime("%B")
   end
 
