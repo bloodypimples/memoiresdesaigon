@@ -32,7 +32,7 @@ class PagesController < ApplicationController
   end
 
   def choose_your_room
-    @rooms = Room.all.order('created_at desc')
+    @rooms = Room.where(bookable: true).order('created_at desc')
 
     if defined?(params[:reservation][:arrival_date])
       $arrival = params[:reservation][:arrival_date]

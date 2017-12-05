@@ -1,6 +1,6 @@
 ActiveAdmin.register Room do
 
-  permit_params :name, :rate, :short_description, :size, :bed, :occupancy, :long_description, :image
+  permit_params :name, :rate, :short_description, :size, :bed, :occupancy, :long_description, :image, :bookable
 
   index do
     selectable_column
@@ -22,6 +22,7 @@ ActiveAdmin.register Room do
     end
     inputs 'Description', :long_description
     input :image
+    input :bookable, as: :boolean
     actions
   end
 end
