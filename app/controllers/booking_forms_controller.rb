@@ -9,7 +9,11 @@ class BookingFormsController < ApplicationController
       ReservationMailer.notify_staff(@form).deliver_now
       redirect_to completed_path
     else
-      redirect_to choose_your_room_path, alert: "Please make sure you have filled in every required field."
+      redirect_to choose_your_room_path(reservation: {
+        arrival_date: booking_form_params[:checkin].to_i * 1000,
+        departure_date: booking_form_params[:checkout].to_i * 1000,
+        guests: booking_form_params[:guests]
+      }), alert: "Please make sure you have filled in every required field."
     end
   end
 

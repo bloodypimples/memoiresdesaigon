@@ -13,10 +13,10 @@ class PagesController < ApplicationController
         @reserved_rooms.push(@rooms[room]) if @rooms[room][:amount].to_i > 0
       end
       if @reserved_rooms.length == 0
-        redirect_to choose_your_room_path + "#body", alert: "Please select at least 1 room."
+        redirect_to choose_your_room_path(reservation: {arrival_date: @arrival, departure_date: @departure, guests: @guests}) + "#body", alert: "Please select at least 1 room."
       end
     else
-      redirect_to choose_your_room_path + "#body", alert: "Please select at least 1 room."
+      redirect_to choose_your_room_path(arrival: @arrival, departure: @departure, guests: @guests) + "#body", alert: "Please select at least 1 room."
     end
   end
 
