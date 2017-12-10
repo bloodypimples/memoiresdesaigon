@@ -49,7 +49,7 @@ $(document).ready(function(){
 
   smooth_scroll('.book_now', '.col-6.booking');
 
-  $('.slideshow').css('height', $(window).height())
+  $('.slideshow').css('height', document.documentElement.clientHeight)
 
   var fixed_point = 150
 
