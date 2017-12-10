@@ -1,11 +1,11 @@
 /*
  *= require jquery-ui
  */
-@import url('https://fonts.googleapis.com/css?family=Lato|Raleway');
-$primary: #4c7211;
-$primary_shade: #44660f;
-$secondary: #d0a126;
-$secondary_shade: #bb9022;
+@import url('https://fonts.googleapis.com/css?family=Lato:300|Raleway:300');
+$primary: #3b5a0d;
+$primary_shade: #35510b;
+$secondary: #c7b625;
+$secondary_shade: #b3a321;
 $heading: 'Raleway', sans-serif;
 $normal: 'Lato', sans-serif;
 h2{
@@ -585,6 +585,7 @@ body > .wrapper{
   width: 100%;
   height: 700px;
   overflow: hidden;
+  background-color: $primary;
 }
 
 .slideshow > div {
@@ -656,6 +657,13 @@ body > .wrapper{
       font-weight: 100;
       .seperator{
         background-color: white;
+        transition: all 500ms ease;
+        transform: translateY(200px);
+        opacity: 0;
+        &.visible{
+          transform: translateY(0px);
+          opacity: 1;
+        }
       }
       p{
         letter-spacing: normal;
@@ -767,7 +775,7 @@ body > .wrapper{
           color: white;
         }
         &:after{
-          opacity: 0.5;
+          opacity: 0;
         }
       }
       &:after{
@@ -780,8 +788,9 @@ body > .wrapper{
         height: 100%;
         z-index: 1;
         background-color: $primary;
-        opacity: 0;
-        transition: all 300ms ease;
+        opacity: 1;
+        mix-blend-mode: screen;
+        transition: all 2000ms ease;
       }
       position: relative;
       min-height: 500px;
@@ -863,6 +872,7 @@ body > .wrapper{
     box-sizing: border-box;
   }
   &.booking{
+    position: relative;
     padding: 100px 80px;
     box-sizing: border-box;
     background-color: rgba(1,1,1,.1);
@@ -1355,6 +1365,9 @@ form{
   }
 }
 .row.introduction{
+  position: relative;
+  z-index: 2;
+  overflow: visible;
   .col{
     box-sizing: border-box;
     padding: 80px;
@@ -1803,8 +1816,9 @@ form{
     left: 0px;
     width: 100%;
     height: 100%;
-    background-color: $secondary;
-    opacity: 0.3;
+    background-color: $primary;
+    opacity: 1;
+    mix-blend-mode: screen;
     content: " ";
   }
 }
@@ -1842,6 +1856,31 @@ form{
 .ui-datepicker-month{
   font-weight: 100;
 }
+
+.row.indulge, .row.event .heading, .row.gallery, .footer{
+  &:after{
+    opacity: 0.3;
+  }
+}
+
+.book_now{
+  position: absolute;
+  top: calc(-20px + -1.5rem);
+  right: 80px;
+  font-size: 1.5rem;
+  font-family: $heading;
+  font-weight: 100;
+  display: inline-block;
+  background-color: $primary;
+  color: white;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  line-height: 1.5rem;
+  padding-left: 100px;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+}
+
 @media(max-width: 1000px){
   .nav{
     .logo{
@@ -2009,6 +2048,9 @@ form{
   }
 }
 @media(max-width: 700px){
+  .book_now{
+    display: none;
+  }
   .choose-your-room.wrapper, .booking.wrapper{
     .body{
       padding: 20px;

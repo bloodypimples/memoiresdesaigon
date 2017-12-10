@@ -31,11 +31,25 @@ function set_booking_form(){
   $('.guests .people').html(guests)
 }
 
+function smooth_scroll(trigger_element, target_element){
+  $(document).on('click', trigger_element, function(e){
+    e.preventDefault();
+
+    $('html, body').animate({
+      scrollTop: $(target_element).offset().top
+    }, 500);
+  })
+}
+
 var monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
 
 $(document).ready(function(){
+
+  smooth_scroll('.book_now', '.col-6.booking');
+
+  $('.slideshow').css('height', $(window).height())
 
   var fixed_point = 150
 
@@ -54,11 +68,15 @@ $(document).ready(function(){
     $(".slideshow > div:first > .text > h2").toggleClass('hidden');
     setTimeout(function(){
       $(".slideshow > div:first > .text > .innertext").toggleClass('hidden');
+      setTimeout(function(){
+        $(".slideshow > div > .text > .innertext .seperator").toggleClass('visible');
+      }, 1000)
       $(".slideshow > div > .image").toggleClass('colored');
     }, 1500)
   });
 
   slideshow_interval = setInterval(function() {
+    $(".slideshow > div > .text > .innertext .seperator").removeClass('visible');
     $(".slideshow > div > .image").toggleClass('colored');
     $(".slideshow > div:first").addClass('fade_out');
     setTimeout(function(){
@@ -74,6 +92,9 @@ $(document).ready(function(){
           $(".slideshow > div > .text > h2").toggleClass('hidden');
           setTimeout(function(){
             $(".slideshow > div > .text > .innertext").toggleClass('hidden');
+            setTimeout(function(){
+              $(".slideshow > div > .text > .innertext .seperator").toggleClass('visible');
+            }, 1000)
             $(".slideshow > div > .image").toggleClass('colored');
           }, 1500)
         }, 2000)
