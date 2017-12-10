@@ -47,6 +47,7 @@ $(document).ready(function(){
     }
   })
 
+  // slideshow javascript
   $(".slideshow > div").hide();
 
   $('.slideshow > div:first').fadeIn(2000, function(){
@@ -59,19 +60,28 @@ $(document).ready(function(){
 
   slideshow_interval = setInterval(function() {
     $(".slideshow > div > .image").toggleClass('colored');
+    $(".slideshow > div:first").addClass('fade_out');
+    setTimeout(function(){
+      $(".slideshow > div").removeClass('fade_out');
+    }, 3000)
     $('.slideshow > div:first')
-      .fadeOut(2000)
+      .fadeOut(1000)
       .next()
-      .fadeIn(2000, function(){
-        $(".slideshow > div > .text > h2").toggleClass('hidden');
+      .fadeIn(0, function(){
+        $(this).addClass('fade_in');
         setTimeout(function(){
-          $(".slideshow > div > .text > .innertext").toggleClass('hidden');
-          $(".slideshow > div > .image").toggleClass('colored');
-        }, 1500)
+          $(".slideshow > div").removeClass('fade_in');
+          $(".slideshow > div > .text > h2").toggleClass('hidden');
+          setTimeout(function(){
+            $(".slideshow > div > .text > .innertext").toggleClass('hidden');
+            $(".slideshow > div > .image").toggleClass('colored');
+          }, 1500)
+        }, 2000)
       })
       .end()
       .appendTo('.slideshow');
   }, 12000);
+  // slideshow javascript />
 
   $('.hamburger').click(function(){
     $('.nav > .items').toggleClass('revealed');

@@ -584,6 +584,7 @@ body > .wrapper{
   position: relative;
   width: 100%;
   height: 700px;
+  overflow: hidden;
 }
 
 .slideshow > div {
@@ -606,11 +607,30 @@ body > .wrapper{
   align-items: center;
   justify-content: center;
   text-align: center;
+  &.fade_out{
+    animation: fadeout 1000ms ease-in-out;
+  }
+  &.fade_in{
+    animation: fadein 1000ms ease-in-out;
+  }
   .image{
-    filter: grayscale(100%);
+    // filter: grayscale(100%);
     transition: all 1000ms ease;
+    &.fade_out{
+      animation: fadeout 1000ms ease-in-out;
+    }
+    &.fade_in{
+      animation: fadein 1000ms ease-in-out;
+    }
+    &:after{
+      transition: all 1000ms ease;
+    }
     &.colored{
-      filter: grayscale(0%);
+      // filter: grayscale(0%);
+      &:after{
+        opacity: 0;
+        transition: all 5000ms ease;
+      }
       transition: all 5000ms ease;
     }
   }
@@ -640,6 +660,8 @@ body > .wrapper{
       p{
         letter-spacing: normal;
         color: white;
+        font-weight: 300;
+        text-rendering: optimizeLegibility;
       }
     }
     h2.hidden{
@@ -1804,7 +1826,8 @@ form{
       width: 100%;
       height: 100%;
       background-color: $primary;
-      opacity: 0.3;
+      mix-blend-mode: screen;
+      opacity: 1;
       content: " ";
     }
   }
@@ -2051,4 +2074,14 @@ form{
       padding: 0px;
     }
   }
+}
+
+@keyframes fadeout {
+  0% {transform: scale(1)}
+  100% {transform:scale(1.2)}
+}
+
+@keyframes fadein{
+  0% {transform: scale(0.8)}
+  100% {transform: scale(1)}
 }
