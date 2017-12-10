@@ -1,0 +1,4347 @@
+/*!
+ * jQuery UI CSS Framework 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/category/theming/
+ *
+ * To view and modify this theme, visit http://jqueryui.com/themeroller/
+ */
+
+/*
+
+
+
+
+
+
+ */
+
+
+
+/* Component containers
+----------------------------------*/
+
+.ui-widget {
+	font-family: Arial,Helvetica,sans-serif/*{ffDefault}*/;
+	font-size: 1em/*{fsDefault}*/;
+}
+.ui-widget .ui-widget {
+	font-size: 1em;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+	font-family: Arial,Helvetica,sans-serif/*{ffDefault}*/;
+	font-size: 1em;
+}
+.ui-widget.ui-widget-content {
+	border: 1px solid #c5c5c5/*{borderColorDefault}*/;
+}
+.ui-widget-content {
+	border: 1px solid #dddddd/*{borderColorContent}*/;
+	background: #ffffff/*{bgColorContent}*/ /*{bgImgUrlContent}*/ /*{bgContentXPos}*/ /*{bgContentYPos}*/ /*{bgContentRepeat}*/;
+	color: #333333/*{fcContent}*/;
+}
+.ui-widget-content a {
+	color: #333333/*{fcContent}*/;
+}
+.ui-widget-header {
+	border: 1px solid #dddddd/*{borderColorHeader}*/;
+	background: #e9e9e9/*{bgColorHeader}*/ /*{bgImgUrlHeader}*/ /*{bgHeaderXPos}*/ /*{bgHeaderYPos}*/ /*{bgHeaderRepeat}*/;
+	color: #333333/*{fcHeader}*/;
+	font-weight: bold;
+}
+.ui-widget-header a {
+	color: #333333/*{fcHeader}*/;
+}
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+
+/* We use html here because we need a greater specificity to make sure disabled
+works properly when clicked or hovered */
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+	border: 1px solid #c5c5c5/*{borderColorDefault}*/;
+	background: #f6f6f6/*{bgColorDefault}*/ /*{bgImgUrlDefault}*/ /*{bgDefaultXPos}*/ /*{bgDefaultYPos}*/ /*{bgDefaultRepeat}*/;
+	font-weight: normal/*{fwDefault}*/;
+	color: #454545/*{fcDefault}*/;
+}
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited,
+a.ui-button,
+a:link.ui-button,
+a:visited.ui-button,
+.ui-button {
+	color: #454545/*{fcDefault}*/;
+	text-decoration: none;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {
+	border: 1px solid #cccccc/*{borderColorHover}*/;
+	background: #ededed/*{bgColorHover}*/ /*{bgImgUrlHover}*/ /*{bgHoverXPos}*/ /*{bgHoverYPos}*/ /*{bgHoverRepeat}*/;
+	font-weight: normal/*{fwDefault}*/;
+	color: #2b2b2b/*{fcHover}*/;
+}
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited,
+.ui-state-focus a,
+.ui-state-focus a:hover,
+.ui-state-focus a:link,
+.ui-state-focus a:visited,
+a.ui-button:hover,
+a.ui-button:focus {
+	color: #2b2b2b/*{fcHover}*/;
+	text-decoration: none;
+}
+
+.ui-visual-focus {
+	-webkit-box-shadow: 0 0 3px 1px rgb(94, 158, 214);
+	        box-shadow: 0 0 3px 1px rgb(94, 158, 214);
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+	border: 1px solid #003eff/*{borderColorActive}*/;
+	background: #007fff/*{bgColorActive}*/ /*{bgImgUrlActive}*/ /*{bgActiveXPos}*/ /*{bgActiveYPos}*/ /*{bgActiveRepeat}*/;
+	font-weight: normal/*{fwDefault}*/;
+	color: #ffffff/*{fcActive}*/;
+}
+.ui-icon-background,
+.ui-state-active .ui-icon-background {
+	border: #003eff/*{borderColorActive}*/;
+	background-color: #ffffff/*{fcActive}*/;
+}
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+	color: #ffffff/*{fcActive}*/;
+	text-decoration: none;
+}
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+	border: 1px solid #dad55e/*{borderColorHighlight}*/;
+	background: #fffa90/*{bgColorHighlight}*/ /*{bgImgUrlHighlight}*/ /*{bgHighlightXPos}*/ /*{bgHighlightYPos}*/ /*{bgHighlightRepeat}*/;
+	color: #777620/*{fcHighlight}*/;
+}
+.ui-state-checked {
+	border: 1px solid #dad55e/*{borderColorHighlight}*/;
+	background: #fffa90/*{bgColorHighlight}*/;
+}
+.ui-state-highlight a,
+.ui-widget-content .ui-state-highlight a,
+.ui-widget-header .ui-state-highlight a {
+	color: #777620/*{fcHighlight}*/;
+}
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+	border: 1px solid #f1a899/*{borderColorError}*/;
+	background: #fddfdf/*{bgColorError}*/ /*{bgImgUrlError}*/ /*{bgErrorXPos}*/ /*{bgErrorYPos}*/ /*{bgErrorRepeat}*/;
+	color: #5f3f3f/*{fcError}*/;
+}
+.ui-state-error a,
+.ui-widget-content .ui-state-error a,
+.ui-widget-header .ui-state-error a {
+	color: #5f3f3f/*{fcError}*/;
+}
+.ui-state-error-text,
+.ui-widget-content .ui-state-error-text,
+.ui-widget-header .ui-state-error-text {
+	color: #5f3f3f/*{fcError}*/;
+}
+.ui-priority-primary,
+.ui-widget-content .ui-priority-primary,
+.ui-widget-header .ui-priority-primary {
+	font-weight: bold;
+}
+.ui-priority-secondary,
+.ui-widget-content .ui-priority-secondary,
+.ui-widget-header .ui-priority-secondary {
+	opacity: .7;
+	filter:Alpha(Opacity=70); /* support: IE8 */
+	font-weight: normal;
+}
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled {
+	opacity: .35;
+	filter:Alpha(Opacity=35); /* support: IE8 */
+	background-image: none;
+}
+.ui-state-disabled .ui-icon {
+	filter:Alpha(Opacity=35); /* support: IE8 - See #6059 */
+}
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon {
+	width: 16px;
+	height: 16px;
+}
+.ui-icon,
+.ui-widget-content .ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_444444_256x240-31d988765b4e6f56553c29588c500381dc3e6f0aa2980c8212202e5644aefd5d.png)/*{iconsContent}*/;
+}
+.ui-widget-header .ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_444444_256x240-31d988765b4e6f56553c29588c500381dc3e6f0aa2980c8212202e5644aefd5d.png)/*{iconsHeader}*/;
+}
+.ui-state-hover .ui-icon,
+.ui-state-focus .ui-icon,
+.ui-button:hover .ui-icon,
+.ui-button:focus .ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_555555_256x240-32175261daee76c82bb0edf0eea16a56421866fbc31e94f3c1d570aa114502f5.png)/*{iconsHover}*/;
+}
+.ui-state-active .ui-icon,
+.ui-button:active .ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_ffffff_256x240-350df1b7131037de20e83c5c0f3a41a770d2ac48b5762ea772b3f4a8a7b9d47a.png)/*{iconsActive}*/;
+}
+.ui-state-highlight .ui-icon,
+.ui-button .ui-state-highlight.ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_777620_256x240-0b020fc6e696d88d296e7bb1f61f1eb2ad827848e2c7382a4c3e0999e702dd9b.png)/*{iconsHighlight}*/;
+}
+.ui-state-error .ui-icon,
+.ui-state-error-text .ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_cc0000_256x240-40985a64b4d5dd213fba27fcd862a1bd1b337a97674f6ff0b9ec20abcee4bc69.png)/*{iconsError}*/;
+}
+.ui-button .ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_777777_256x240-faf32007ae120c302213557626e660dd10e711c5dd4f1113d35f26dc05b78d2f.png)/*{iconsDefault}*/;
+}
+
+/* positioning */
+.ui-icon-blank { background-position: 16px 16px; }
+.ui-icon-caret-1-n { background-position: 0 0; }
+.ui-icon-caret-1-ne { background-position: -16px 0; }
+.ui-icon-caret-1-e { background-position: -32px 0; }
+.ui-icon-caret-1-se { background-position: -48px 0; }
+.ui-icon-caret-1-s { background-position: -65px 0; }
+.ui-icon-caret-1-sw { background-position: -80px 0; }
+.ui-icon-caret-1-w { background-position: -96px 0; }
+.ui-icon-caret-1-nw { background-position: -112px 0; }
+.ui-icon-caret-2-n-s { background-position: -128px 0; }
+.ui-icon-caret-2-e-w { background-position: -144px 0; }
+.ui-icon-triangle-1-n { background-position: 0 -16px; }
+.ui-icon-triangle-1-ne { background-position: -16px -16px; }
+.ui-icon-triangle-1-e { background-position: -32px -16px; }
+.ui-icon-triangle-1-se { background-position: -48px -16px; }
+.ui-icon-triangle-1-s { background-position: -65px -16px; }
+.ui-icon-triangle-1-sw { background-position: -80px -16px; }
+.ui-icon-triangle-1-w { background-position: -96px -16px; }
+.ui-icon-triangle-1-nw { background-position: -112px -16px; }
+.ui-icon-triangle-2-n-s { background-position: -128px -16px; }
+.ui-icon-triangle-2-e-w { background-position: -144px -16px; }
+.ui-icon-arrow-1-n { background-position: 0 -32px; }
+.ui-icon-arrow-1-ne { background-position: -16px -32px; }
+.ui-icon-arrow-1-e { background-position: -32px -32px; }
+.ui-icon-arrow-1-se { background-position: -48px -32px; }
+.ui-icon-arrow-1-s { background-position: -65px -32px; }
+.ui-icon-arrow-1-sw { background-position: -80px -32px; }
+.ui-icon-arrow-1-w { background-position: -96px -32px; }
+.ui-icon-arrow-1-nw { background-position: -112px -32px; }
+.ui-icon-arrow-2-n-s { background-position: -128px -32px; }
+.ui-icon-arrow-2-ne-sw { background-position: -144px -32px; }
+.ui-icon-arrow-2-e-w { background-position: -160px -32px; }
+.ui-icon-arrow-2-se-nw { background-position: -176px -32px; }
+.ui-icon-arrowstop-1-n { background-position: -192px -32px; }
+.ui-icon-arrowstop-1-e { background-position: -208px -32px; }
+.ui-icon-arrowstop-1-s { background-position: -224px -32px; }
+.ui-icon-arrowstop-1-w { background-position: -240px -32px; }
+.ui-icon-arrowthick-1-n { background-position: 1px -48px; }
+.ui-icon-arrowthick-1-ne { background-position: -16px -48px; }
+.ui-icon-arrowthick-1-e { background-position: -32px -48px; }
+.ui-icon-arrowthick-1-se { background-position: -48px -48px; }
+.ui-icon-arrowthick-1-s { background-position: -64px -48px; }
+.ui-icon-arrowthick-1-sw { background-position: -80px -48px; }
+.ui-icon-arrowthick-1-w { background-position: -96px -48px; }
+.ui-icon-arrowthick-1-nw { background-position: -112px -48px; }
+.ui-icon-arrowthick-2-n-s { background-position: -128px -48px; }
+.ui-icon-arrowthick-2-ne-sw { background-position: -144px -48px; }
+.ui-icon-arrowthick-2-e-w { background-position: -160px -48px; }
+.ui-icon-arrowthick-2-se-nw { background-position: -176px -48px; }
+.ui-icon-arrowthickstop-1-n { background-position: -192px -48px; }
+.ui-icon-arrowthickstop-1-e { background-position: -208px -48px; }
+.ui-icon-arrowthickstop-1-s { background-position: -224px -48px; }
+.ui-icon-arrowthickstop-1-w { background-position: -240px -48px; }
+.ui-icon-arrowreturnthick-1-w { background-position: 0 -64px; }
+.ui-icon-arrowreturnthick-1-n { background-position: -16px -64px; }
+.ui-icon-arrowreturnthick-1-e { background-position: -32px -64px; }
+.ui-icon-arrowreturnthick-1-s { background-position: -48px -64px; }
+.ui-icon-arrowreturn-1-w { background-position: -64px -64px; }
+.ui-icon-arrowreturn-1-n { background-position: -80px -64px; }
+.ui-icon-arrowreturn-1-e { background-position: -96px -64px; }
+.ui-icon-arrowreturn-1-s { background-position: -112px -64px; }
+.ui-icon-arrowrefresh-1-w { background-position: -128px -64px; }
+.ui-icon-arrowrefresh-1-n { background-position: -144px -64px; }
+.ui-icon-arrowrefresh-1-e { background-position: -160px -64px; }
+.ui-icon-arrowrefresh-1-s { background-position: -176px -64px; }
+.ui-icon-arrow-4 { background-position: 0 -80px; }
+.ui-icon-arrow-4-diag { background-position: -16px -80px; }
+.ui-icon-extlink { background-position: -32px -80px; }
+.ui-icon-newwin { background-position: -48px -80px; }
+.ui-icon-refresh { background-position: -64px -80px; }
+.ui-icon-shuffle { background-position: -80px -80px; }
+.ui-icon-transfer-e-w { background-position: -96px -80px; }
+.ui-icon-transferthick-e-w { background-position: -112px -80px; }
+.ui-icon-folder-collapsed { background-position: 0 -96px; }
+.ui-icon-folder-open { background-position: -16px -96px; }
+.ui-icon-document { background-position: -32px -96px; }
+.ui-icon-document-b { background-position: -48px -96px; }
+.ui-icon-note { background-position: -64px -96px; }
+.ui-icon-mail-closed { background-position: -80px -96px; }
+.ui-icon-mail-open { background-position: -96px -96px; }
+.ui-icon-suitcase { background-position: -112px -96px; }
+.ui-icon-comment { background-position: -128px -96px; }
+.ui-icon-person { background-position: -144px -96px; }
+.ui-icon-print { background-position: -160px -96px; }
+.ui-icon-trash { background-position: -176px -96px; }
+.ui-icon-locked { background-position: -192px -96px; }
+.ui-icon-unlocked { background-position: -208px -96px; }
+.ui-icon-bookmark { background-position: -224px -96px; }
+.ui-icon-tag { background-position: -240px -96px; }
+.ui-icon-home { background-position: 0 -112px; }
+.ui-icon-flag { background-position: -16px -112px; }
+.ui-icon-calendar { background-position: -32px -112px; }
+.ui-icon-cart { background-position: -48px -112px; }
+.ui-icon-pencil { background-position: -64px -112px; }
+.ui-icon-clock { background-position: -80px -112px; }
+.ui-icon-disk { background-position: -96px -112px; }
+.ui-icon-calculator { background-position: -112px -112px; }
+.ui-icon-zoomin { background-position: -128px -112px; }
+.ui-icon-zoomout { background-position: -144px -112px; }
+.ui-icon-search { background-position: -160px -112px; }
+.ui-icon-wrench { background-position: -176px -112px; }
+.ui-icon-gear { background-position: -192px -112px; }
+.ui-icon-heart { background-position: -208px -112px; }
+.ui-icon-star { background-position: -224px -112px; }
+.ui-icon-link { background-position: -240px -112px; }
+.ui-icon-cancel { background-position: 0 -128px; }
+.ui-icon-plus { background-position: -16px -128px; }
+.ui-icon-plusthick { background-position: -32px -128px; }
+.ui-icon-minus { background-position: -48px -128px; }
+.ui-icon-minusthick { background-position: -64px -128px; }
+.ui-icon-close { background-position: -80px -128px; }
+.ui-icon-closethick { background-position: -96px -128px; }
+.ui-icon-key { background-position: -112px -128px; }
+.ui-icon-lightbulb { background-position: -128px -128px; }
+.ui-icon-scissors { background-position: -144px -128px; }
+.ui-icon-clipboard { background-position: -160px -128px; }
+.ui-icon-copy { background-position: -176px -128px; }
+.ui-icon-contact { background-position: -192px -128px; }
+.ui-icon-image { background-position: -208px -128px; }
+.ui-icon-video { background-position: -224px -128px; }
+.ui-icon-script { background-position: -240px -128px; }
+.ui-icon-alert { background-position: 0 -144px; }
+.ui-icon-info { background-position: -16px -144px; }
+.ui-icon-notice { background-position: -32px -144px; }
+.ui-icon-help { background-position: -48px -144px; }
+.ui-icon-check { background-position: -64px -144px; }
+.ui-icon-bullet { background-position: -80px -144px; }
+.ui-icon-radio-on { background-position: -96px -144px; }
+.ui-icon-radio-off { background-position: -112px -144px; }
+.ui-icon-pin-w { background-position: -128px -144px; }
+.ui-icon-pin-s { background-position: -144px -144px; }
+.ui-icon-play { background-position: 0 -160px; }
+.ui-icon-pause { background-position: -16px -160px; }
+.ui-icon-seek-next { background-position: -32px -160px; }
+.ui-icon-seek-prev { background-position: -48px -160px; }
+.ui-icon-seek-end { background-position: -64px -160px; }
+.ui-icon-seek-start { background-position: -80px -160px; }
+/* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
+.ui-icon-seek-first { background-position: -80px -160px; }
+.ui-icon-stop { background-position: -96px -160px; }
+.ui-icon-eject { background-position: -112px -160px; }
+.ui-icon-volume-off { background-position: -128px -160px; }
+.ui-icon-volume-on { background-position: -144px -160px; }
+.ui-icon-power { background-position: 0 -176px; }
+.ui-icon-signal-diag { background-position: -16px -176px; }
+.ui-icon-signal { background-position: -32px -176px; }
+.ui-icon-battery-0 { background-position: -48px -176px; }
+.ui-icon-battery-1 { background-position: -64px -176px; }
+.ui-icon-battery-2 { background-position: -80px -176px; }
+.ui-icon-battery-3 { background-position: -96px -176px; }
+.ui-icon-circle-plus { background-position: 0 -192px; }
+.ui-icon-circle-minus { background-position: -16px -192px; }
+.ui-icon-circle-close { background-position: -32px -192px; }
+.ui-icon-circle-triangle-e { background-position: -48px -192px; }
+.ui-icon-circle-triangle-s { background-position: -64px -192px; }
+.ui-icon-circle-triangle-w { background-position: -80px -192px; }
+.ui-icon-circle-triangle-n { background-position: -96px -192px; }
+.ui-icon-circle-arrow-e { background-position: -112px -192px; }
+.ui-icon-circle-arrow-s { background-position: -128px -192px; }
+.ui-icon-circle-arrow-w { background-position: -144px -192px; }
+.ui-icon-circle-arrow-n { background-position: -160px -192px; }
+.ui-icon-circle-zoomin { background-position: -176px -192px; }
+.ui-icon-circle-zoomout { background-position: -192px -192px; }
+.ui-icon-circle-check { background-position: -208px -192px; }
+.ui-icon-circlesmall-plus { background-position: 0 -208px; }
+.ui-icon-circlesmall-minus { background-position: -16px -208px; }
+.ui-icon-circlesmall-close { background-position: -32px -208px; }
+.ui-icon-squaresmall-plus { background-position: -48px -208px; }
+.ui-icon-squaresmall-minus { background-position: -64px -208px; }
+.ui-icon-squaresmall-close { background-position: -80px -208px; }
+.ui-icon-grip-dotted-vertical { background-position: 0 -224px; }
+.ui-icon-grip-dotted-horizontal { background-position: -16px -224px; }
+.ui-icon-grip-solid-vertical { background-position: -32px -224px; }
+.ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
+.ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
+.ui-icon-grip-diagonal-se { background-position: -80px -224px; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+	border-top-left-radius: 3px/*{cornerRadius}*/;
+}
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+	border-top-right-radius: 3px/*{cornerRadius}*/;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+	border-bottom-left-radius: 3px/*{cornerRadius}*/;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+	border-bottom-right-radius: 3px/*{cornerRadius}*/;
+}
+
+/* Overlays */
+.ui-widget-overlay {
+	background: #aaaaaa/*{bgColorOverlay}*/ /*{bgImgUrlOverlay}*/ /*{bgOverlayXPos}*/ /*{bgOverlayYPos}*/ /*{bgOverlayRepeat}*/;
+	opacity: .3/*{opacityOverlay}*/;
+	filter: Alpha(Opacity=30)/*{opacityFilterOverlay}*/; /* support: IE8 */
+}
+.ui-widget-shadow {
+	-webkit-box-shadow: 0/*{offsetLeftShadow}*/ 0/*{offsetTopShadow}*/ 5px/*{thicknessShadow}*/ #666666/*{bgColorShadow}*/;
+	box-shadow: 0/*{offsetLeftShadow}*/ 0/*{offsetTopShadow}*/ 5px/*{thicknessShadow}*/ #666666/*{bgColorShadow}*/;
+}
+/*!
+ * jQuery UI CSS Framework 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/category/theming/
+ */
+/*
+
+ */
+
+/* Layout helpers
+----------------------------------*/
+
+.ui-helper-hidden {
+	display: none;
+}
+.ui-helper-hidden-accessible {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+.ui-helper-reset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	line-height: 1.3;
+	text-decoration: none;
+	font-size: 100%;
+	list-style: none;
+}
+.ui-helper-clearfix:before,
+.ui-helper-clearfix:after {
+	content: "";
+	display: table;
+	border-collapse: collapse;
+}
+.ui-helper-clearfix:after {
+	clear: both;
+}
+.ui-helper-zfix {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	opacity: 0;
+	filter:Alpha(Opacity=0); /* support: IE8 */
+}
+
+.ui-front {
+	z-index: 100;
+}
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled {
+	cursor: default !important;
+	pointer-events: none;
+}
+
+
+/* Icons
+----------------------------------*/
+.ui-icon {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -.25em;
+	position: relative;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+.ui-widget-icon-block {
+	left: 50%;
+	margin-left: -8px;
+	display: block;
+}
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/*!
+ * jQuery UI Accordion 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/accordion/#theming
+ */
+/*
+
+ */
+
+.ui-accordion .ui-accordion-header {
+	display: block;
+	cursor: pointer;
+	position: relative;
+	margin: 2px 0 0 0;
+	padding: .5em .5em .5em .7em;
+	font-size: 100%;
+}
+.ui-accordion .ui-accordion-content {
+	padding: 1em 2.2em;
+	border-top: 0;
+	overflow: auto;
+}
+/*!
+ * jQuery UI Autocomplete 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/autocomplete/#theming
+ */
+/*
+
+ */
+
+.ui-autocomplete {
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: default;
+}
+/*!
+ * jQuery UI Button 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/button/#theming
+ */
+/*
+
+ */
+
+.ui-button {
+	padding: .4em 1em;
+	display: inline-block;
+	position: relative;
+	line-height: normal;
+	margin-right: .1em;
+	cursor: pointer;
+	vertical-align: middle;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	/* Support: IE <= 11 */
+	overflow: visible;
+}
+
+.ui-button,
+.ui-button:link,
+.ui-button:visited,
+.ui-button:hover,
+.ui-button:active {
+	text-decoration: none;
+}
+
+/* to make room for the icon, a width needs to be set here */
+.ui-button-icon-only {
+	width: 2em;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	text-indent: -9999px;
+	white-space: nowrap;
+}
+
+/* no icon support for input elements */
+input.ui-button.ui-button-icon-only {
+	text-indent: 0;
+}
+
+/* button icon element(s) */
+.ui-button-icon-only .ui-icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -8px;
+	margin-left: -8px;
+}
+
+.ui-button.ui-icon-notext .ui-icon {
+	padding: 0;
+	width: 2.1em;
+	height: 2.1em;
+	text-indent: -9999px;
+	white-space: nowrap;
+
+}
+
+input.ui-button.ui-icon-notext .ui-icon {
+	width: auto;
+	height: auto;
+	text-indent: 0;
+	white-space: normal;
+	padding: .4em 1em;
+}
+
+/* workarounds */
+/* Support: Firefox 5 - 40 */
+input.ui-button::-moz-focus-inner,
+button.ui-button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+/*!
+ * jQuery UI Checkboxradio 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/checkboxradio/#theming
+ */
+/*
+
+ */
+
+
+.ui-checkboxradio-label .ui-icon-background {
+	-webkit-box-shadow: inset 1px 1px 1px #ccc;
+	        box-shadow: inset 1px 1px 1px #ccc;
+	border-radius: .12em;
+	border: none;
+}
+.ui-checkboxradio-radio-label .ui-icon-background {
+	width: 16px;
+	height: 16px;
+	border-radius: 1em;
+	overflow: visible;
+	border: none;
+}
+.ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon,
+.ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
+	background-image: none;
+	width: 8px;
+	height: 8px;
+	border-width: 4px;
+	border-style: solid;
+}
+.ui-checkboxradio-disabled {
+	pointer-events: none;
+}
+/*!
+ * jQuery UI Controlgroup 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/controlgroup/#theming
+ */
+/*
+
+ */
+
+
+.ui-controlgroup {
+	vertical-align: middle;
+	display: inline-block;
+}
+.ui-controlgroup > .ui-controlgroup-item {
+	float: left;
+	margin-left: 0;
+	margin-right: 0;
+}
+.ui-controlgroup > .ui-controlgroup-item:focus,
+.ui-controlgroup > .ui-controlgroup-item.ui-visual-focus {
+	z-index: 9999;
+}
+.ui-controlgroup-vertical > .ui-controlgroup-item {
+	display: block;
+	float: none;
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: left;
+}
+.ui-controlgroup-vertical .ui-controlgroup-item {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.ui-controlgroup .ui-controlgroup-label {
+	padding: .4em 1em;
+}
+.ui-controlgroup .ui-controlgroup-label span {
+	font-size: 80%;
+}
+.ui-controlgroup-horizontal .ui-controlgroup-label + .ui-controlgroup-item {
+	border-left: none;
+}
+.ui-controlgroup-vertical .ui-controlgroup-label + .ui-controlgroup-item {
+	border-top: none;
+}
+.ui-controlgroup-horizontal .ui-controlgroup-label.ui-widget-content {
+	border-right: none;
+}
+.ui-controlgroup-vertical .ui-controlgroup-label.ui-widget-content {
+	border-bottom: none;
+}
+
+/* Spinner specific style fixes */
+.ui-controlgroup-vertical .ui-spinner-input {
+
+	/* Support: IE8 only, Android < 4.4 only */
+	width: 75%;
+	width: calc( 100% - 2.4em );
+}
+.ui-controlgroup-vertical .ui-spinner .ui-spinner-up {
+	border-top-style: solid;
+}
+
+/*!
+ * jQuery UI Datepicker 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/datepicker/#theming
+ */
+/*
+
+ */
+
+.ui-datepicker {
+	width: 17em;
+	padding: .2em .2em 0;
+	display: none;
+}
+.ui-datepicker .ui-datepicker-header {
+	position: relative;
+	padding: .2em 0;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+	position: absolute;
+	top: 2px;
+	width: 1.8em;
+	height: 1.8em;
+}
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+	top: 1px;
+}
+.ui-datepicker .ui-datepicker-prev {
+	left: 2px;
+}
+.ui-datepicker .ui-datepicker-next {
+	right: 2px;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+	left: 1px;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+	right: 1px;
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -8px;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-datepicker .ui-datepicker-title {
+	margin: 0 2.3em;
+	line-height: 1.8em;
+	text-align: center;
+}
+.ui-datepicker .ui-datepicker-title select {
+	font-size: 1em;
+	margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+	width: 45%;
+}
+.ui-datepicker table {
+	width: 100%;
+	font-size: .9em;
+	border-collapse: collapse;
+	margin: 0 0 .4em;
+}
+.ui-datepicker th {
+	padding: .7em .3em;
+	text-align: center;
+	font-weight: bold;
+	border: 0;
+}
+.ui-datepicker td {
+	border: 0;
+	padding: 1px;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+	display: block;
+	padding: .2em;
+	text-align: right;
+	text-decoration: none;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+	background-image: none;
+	margin: .7em 0 0 0;
+	padding: 0 .2em;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+	float: right;
+	margin: .5em .2em .4em;
+	cursor: pointer;
+	padding: .2em .6em .3em .6em;
+	width: auto;
+	overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+	float: left;
+}
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi {
+	width: auto;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+	float: left;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+	width: 95%;
+	margin: 0 auto .4em;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group {
+	width: 50%;
+}
+.ui-datepicker-multi-3 .ui-datepicker-group {
+	width: 33.3%;
+}
+.ui-datepicker-multi-4 .ui-datepicker-group {
+	width: 25%;
+}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+	border-left-width: 0;
+}
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+	clear: left;
+}
+.ui-datepicker-row-break {
+	clear: both;
+	width: 100%;
+	font-size: 0;
+}
+
+/* RTL support */
+.ui-datepicker-rtl {
+	direction: rtl;
+}
+.ui-datepicker-rtl .ui-datepicker-prev {
+	right: 2px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next {
+	left: 2px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+	right: 1px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+	left: 1px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+	clear: right;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+	float: left;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+.ui-datepicker-rtl .ui-datepicker-group {
+	float: right;
+}
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+	border-right-width: 0;
+	border-left-width: 1px;
+}
+
+/* Icons */
+.ui-datepicker .ui-icon {
+	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	left: .5em;
+	top: .3em;
+}
+/*!
+ * jQuery UI Dialog 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/dialog/#theming
+ */
+/*
+
+ */
+
+.ui-dialog {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: .2em;
+	outline: 0;
+}
+.ui-dialog .ui-dialog-titlebar {
+	padding: .4em 1em;
+	position: relative;
+}
+.ui-dialog .ui-dialog-title {
+	float: left;
+	margin: .1em 0;
+	white-space: nowrap;
+	width: 90%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+	position: absolute;
+	right: .3em;
+	top: 50%;
+	width: 20px;
+	margin: -10px 0 0 0;
+	padding: 1px;
+	height: 20px;
+}
+.ui-dialog .ui-dialog-content {
+	position: relative;
+	border: 0;
+	padding: .5em 1em;
+	background: none;
+	overflow: auto;
+}
+.ui-dialog .ui-dialog-buttonpane {
+	text-align: left;
+	border-width: 1px 0 0 0;
+	background-image: none;
+	margin-top: .5em;
+	padding: .3em 1em .5em .4em;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+	float: right;
+}
+.ui-dialog .ui-dialog-buttonpane button {
+	margin: .5em .4em .5em 0;
+	cursor: pointer;
+}
+.ui-dialog .ui-resizable-n {
+	height: 2px;
+	top: 0;
+}
+.ui-dialog .ui-resizable-e {
+	width: 2px;
+	right: 0;
+}
+.ui-dialog .ui-resizable-s {
+	height: 2px;
+	bottom: 0;
+}
+.ui-dialog .ui-resizable-w {
+	width: 2px;
+	left: 0;
+}
+.ui-dialog .ui-resizable-se,
+.ui-dialog .ui-resizable-sw,
+.ui-dialog .ui-resizable-ne,
+.ui-dialog .ui-resizable-nw {
+	width: 7px;
+	height: 7px;
+}
+.ui-dialog .ui-resizable-se {
+	right: 0;
+	bottom: 0;
+}
+.ui-dialog .ui-resizable-sw {
+	left: 0;
+	bottom: 0;
+}
+.ui-dialog .ui-resizable-ne {
+	right: 0;
+	top: 0;
+}
+.ui-dialog .ui-resizable-nw {
+	left: 0;
+	top: 0;
+}
+.ui-draggable .ui-dialog-titlebar {
+	cursor: move;
+}
+/*!
+ * jQuery UI Draggable 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+/*
+
+ */
+
+.ui-draggable-handle {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+/*!
+ * jQuery UI Menu 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/menu/#theming
+ */
+/*
+
+ */
+
+.ui-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: block;
+	outline: 0;
+}
+.ui-menu .ui-menu {
+	position: absolute;
+}
+.ui-menu .ui-menu-item {
+	margin: 0;
+	cursor: pointer;
+	/* support: IE10, see #8844 */
+	list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+}
+.ui-menu .ui-menu-item-wrapper {
+	position: relative;
+	padding: 3px 1em 3px .4em;
+}
+.ui-menu .ui-menu-divider {
+	margin: 5px 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	border-width: 1px 0 0 0;
+}
+.ui-menu .ui-state-focus,
+.ui-menu .ui-state-active {
+	margin: -1px;
+}
+
+/* icon support */
+.ui-menu-icons {
+	position: relative;
+}
+.ui-menu-icons .ui-menu-item-wrapper {
+	padding-left: 2em;
+}
+
+/* left-aligned */
+.ui-menu .ui-icon {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: .2em;
+	margin: auto 0;
+}
+
+/* right-aligned */
+.ui-menu .ui-menu-icon {
+	left: auto;
+	right: 0;
+}
+/*!
+ * jQuery UI Progressbar 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/progressbar/#theming
+ */
+/*
+
+ */
+
+.ui-progressbar {
+	height: 2em;
+	text-align: left;
+	overflow: hidden;
+}
+.ui-progressbar .ui-progressbar-value {
+	margin: -1px;
+	height: 100%;
+}
+.ui-progressbar .ui-progressbar-overlay {
+	background: url("data:image/gif;base64,R0lGODlhKAAoAIABAAAAAP///yH/C05FVFNDQVBFMi4wAwEAAAAh+QQJAQABACwAAAAAKAAoAAACkYwNqXrdC52DS06a7MFZI+4FHBCKoDeWKXqymPqGqxvJrXZbMx7Ttc+w9XgU2FB3lOyQRWET2IFGiU9m1frDVpxZZc6bfHwv4c1YXP6k1Vdy292Fb6UkuvFtXpvWSzA+HycXJHUXiGYIiMg2R6W459gnWGfHNdjIqDWVqemH2ekpObkpOlppWUqZiqr6edqqWQAAIfkECQEAAQAsAAAAACgAKAAAApSMgZnGfaqcg1E2uuzDmmHUBR8Qil95hiPKqWn3aqtLsS18y7G1SzNeowWBENtQd+T1JktP05nzPTdJZlR6vUxNWWjV+vUWhWNkWFwxl9VpZRedYcflIOLafaa28XdsH/ynlcc1uPVDZxQIR0K25+cICCmoqCe5mGhZOfeYSUh5yJcJyrkZWWpaR8doJ2o4NYq62lAAACH5BAkBAAEALAAAAAAoACgAAAKVDI4Yy22ZnINRNqosw0Bv7i1gyHUkFj7oSaWlu3ovC8GxNso5fluz3qLVhBVeT/Lz7ZTHyxL5dDalQWPVOsQWtRnuwXaFTj9jVVh8pma9JjZ4zYSj5ZOyma7uuolffh+IR5aW97cHuBUXKGKXlKjn+DiHWMcYJah4N0lYCMlJOXipGRr5qdgoSTrqWSq6WFl2ypoaUAAAIfkECQEAAQAsAAAAACgAKAAAApaEb6HLgd/iO7FNWtcFWe+ufODGjRfoiJ2akShbueb0wtI50zm02pbvwfWEMWBQ1zKGlLIhskiEPm9R6vRXxV4ZzWT2yHOGpWMyorblKlNp8HmHEb/lCXjcW7bmtXP8Xt229OVWR1fod2eWqNfHuMjXCPkIGNileOiImVmCOEmoSfn3yXlJWmoHGhqp6ilYuWYpmTqKUgAAIfkECQEAAQAsAAAAACgAKAAAApiEH6kb58biQ3FNWtMFWW3eNVcojuFGfqnZqSebuS06w5V80/X02pKe8zFwP6EFWOT1lDFk8rGERh1TTNOocQ61Hm4Xm2VexUHpzjymViHrFbiELsefVrn6XKfnt2Q9G/+Xdie499XHd2g4h7ioOGhXGJboGAnXSBnoBwKYyfioubZJ2Hn0RuRZaflZOil56Zp6iioKSXpUAAAh+QQJAQABACwAAAAAKAAoAAACkoQRqRvnxuI7kU1a1UU5bd5tnSeOZXhmn5lWK3qNTWvRdQxP8qvaC+/yaYQzXO7BMvaUEmJRd3TsiMAgswmNYrSgZdYrTX6tSHGZO73ezuAw2uxuQ+BbeZfMxsexY35+/Qe4J1inV0g4x3WHuMhIl2jXOKT2Q+VU5fgoSUI52VfZyfkJGkha6jmY+aaYdirq+lQAACH5BAkBAAEALAAAAAAoACgAAAKWBIKpYe0L3YNKToqswUlvznigd4wiR4KhZrKt9Upqip61i9E3vMvxRdHlbEFiEXfk9YARYxOZZD6VQ2pUunBmtRXo1Lf8hMVVcNl8JafV38aM2/Fu5V16Bn63r6xt97j09+MXSFi4BniGFae3hzbH9+hYBzkpuUh5aZmHuanZOZgIuvbGiNeomCnaxxap2upaCZsq+1kAACH5BAkBAAEALAAAAAAoACgAAAKXjI8By5zf4kOxTVrXNVlv1X0d8IGZGKLnNpYtm8Lr9cqVeuOSvfOW79D9aDHizNhDJidFZhNydEahOaDH6nomtJjp1tutKoNWkvA6JqfRVLHU/QUfau9l2x7G54d1fl995xcIGAdXqMfBNadoYrhH+Mg2KBlpVpbluCiXmMnZ2Sh4GBqJ+ckIOqqJ6LmKSllZmsoq6wpQAAAh+QQJAQABACwAAAAAKAAoAAAClYx/oLvoxuJDkU1a1YUZbJ59nSd2ZXhWqbRa2/gF8Gu2DY3iqs7yrq+xBYEkYvFSM8aSSObE+ZgRl1BHFZNr7pRCavZ5BW2142hY3AN/zWtsmf12p9XxxFl2lpLn1rseztfXZjdIWIf2s5dItwjYKBgo9yg5pHgzJXTEeGlZuenpyPmpGQoKOWkYmSpaSnqKileI2FAAACH5BAkBAAEALAAAAAAoACgAAAKVjB+gu+jG4kORTVrVhRlsnn2dJ3ZleFaptFrb+CXmO9OozeL5VfP99HvAWhpiUdcwkpBH3825AwYdU8xTqlLGhtCosArKMpvfa1mMRae9VvWZfeB2XfPkeLmm18lUcBj+p5dnN8jXZ3YIGEhYuOUn45aoCDkp16hl5IjYJvjWKcnoGQpqyPlpOhr3aElaqrq56Bq7VAAAOw==");
+	height: 100%;
+	filter: alpha(opacity=25); /* support: IE8 */
+	opacity: 0.25;
+}
+.ui-progressbar-indeterminate .ui-progressbar-value {
+	background-image: none;
+}
+/*!
+ * jQuery UI Resizable 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+/*
+
+ */
+
+.ui-resizable {
+	position: relative;
+}
+.ui-resizable-handle {
+	position: absolute;
+	font-size: 0.1px;
+	display: block;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.ui-resizable-disabled .ui-resizable-handle,
+.ui-resizable-autohide .ui-resizable-handle {
+	display: none;
+}
+.ui-resizable-n {
+	cursor: n-resize;
+	height: 7px;
+	width: 100%;
+	top: -5px;
+	left: 0;
+}
+.ui-resizable-s {
+	cursor: s-resize;
+	height: 7px;
+	width: 100%;
+	bottom: -5px;
+	left: 0;
+}
+.ui-resizable-e {
+	cursor: e-resize;
+	width: 7px;
+	right: -5px;
+	top: 0;
+	height: 100%;
+}
+.ui-resizable-w {
+	cursor: w-resize;
+	width: 7px;
+	left: -5px;
+	top: 0;
+	height: 100%;
+}
+.ui-resizable-se {
+	cursor: se-resize;
+	width: 12px;
+	height: 12px;
+	right: 1px;
+	bottom: 1px;
+}
+.ui-resizable-sw {
+	cursor: sw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	bottom: -5px;
+}
+.ui-resizable-nw {
+	cursor: nw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	top: -5px;
+}
+.ui-resizable-ne {
+	cursor: ne-resize;
+	width: 9px;
+	height: 9px;
+	right: -5px;
+	top: -5px;
+}
+/*!
+ * jQuery UI Selectable 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+/*
+
+ */
+
+.ui-selectable {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.ui-selectable-helper {
+	position: absolute;
+	z-index: 100;
+	border: 1px dotted black;
+}
+/*!
+ * jQuery UI Selectmenu 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/selectmenu/#theming
+ */
+/*
+
+ */
+
+.ui-selectmenu-menu {
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.ui-selectmenu-menu .ui-menu {
+	overflow: auto;
+	overflow-x: hidden;
+	padding-bottom: 1px;
+}
+.ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1.5;
+	padding: 2px 0.4em;
+	margin: 0.5em 0 0 0;
+	height: auto;
+	border: 0;
+}
+.ui-selectmenu-open {
+	display: block;
+}
+.ui-selectmenu-text {
+	display: block;
+	margin-right: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.ui-selectmenu-button.ui-button {
+	text-align: left;
+	white-space: nowrap;
+	width: 14em;
+}
+.ui-selectmenu-icon.ui-icon {
+	float: right;
+	margin-top: 0;
+}
+/*!
+ * jQuery UI Sortable 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+/*
+
+ */
+
+.ui-sortable-handle {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+/*!
+ * jQuery UI Slider 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/slider/#theming
+ */
+/*
+
+ */
+
+.ui-slider {
+	position: relative;
+	text-align: left;
+}
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 1.2em;
+	height: 1.2em;
+	cursor: default;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	background-position: 0 0;
+}
+
+/* support: IE8 - See #6727 */
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+	-webkit-filter: inherit;
+	        filter: inherit;
+}
+
+.ui-slider-horizontal {
+	height: .8em;
+}
+.ui-slider-horizontal .ui-slider-handle {
+	top: -.3em;
+	margin-left: -.6em;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+	left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+
+.ui-slider-vertical {
+	width: .8em;
+	height: 100px;
+}
+.ui-slider-vertical .ui-slider-handle {
+	left: -.3em;
+	margin-left: 0;
+	margin-bottom: -.6em;
+}
+.ui-slider-vertical .ui-slider-range {
+	left: 0;
+	width: 100%;
+}
+.ui-slider-vertical .ui-slider-range-min {
+	bottom: 0;
+}
+.ui-slider-vertical .ui-slider-range-max {
+	top: 0;
+}
+/*!
+ * jQuery UI Spinner 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/spinner/#theming
+ */
+/*
+
+ */
+
+.ui-spinner {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	padding: 0;
+	vertical-align: middle;
+}
+.ui-spinner-input {
+	border: none;
+	background: none;
+	color: inherit;
+	padding: .222em 0;
+	margin: .2em 0;
+	vertical-align: middle;
+	margin-left: .4em;
+	margin-right: 2em;
+}
+.ui-spinner-button {
+	width: 1.6em;
+	height: 50%;
+	font-size: .5em;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	position: absolute;
+	cursor: default;
+	display: block;
+	overflow: hidden;
+	right: 0;
+}
+/* more specificity required here to override default borders */
+.ui-spinner a.ui-spinner-button {
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+}
+.ui-spinner-up {
+	top: 0;
+}
+.ui-spinner-down {
+	bottom: 0;
+}
+/*!
+ * jQuery UI Tabs 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/tabs/#theming
+ */
+/*
+
+ */
+
+.ui-tabs {
+	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+	padding: .2em;
+}
+.ui-tabs .ui-tabs-nav {
+	margin: 0;
+	padding: .2em .2em 0;
+}
+.ui-tabs .ui-tabs-nav li {
+	list-style: none;
+	float: left;
+	position: relative;
+	top: 0;
+	margin: 1px .2em 0 0;
+	border-bottom-width: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+	float: left;
+	padding: .5em 1em;
+	text-decoration: none;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+	margin-bottom: -1px;
+	padding-bottom: 1px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
+.ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
+	cursor: text;
+}
+.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+	cursor: pointer;
+}
+.ui-tabs .ui-tabs-panel {
+	display: block;
+	border-width: 0;
+	padding: 1em 1.4em;
+	background: none;
+}
+/*!
+ * jQuery UI Tooltip 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/tooltip/#theming
+ */
+/*
+
+ */
+
+.ui-tooltip {
+	padding: 8px;
+	position: absolute;
+	z-index: 9999;
+	max-width: 300px;
+}
+body .ui-tooltip {
+	border-width: 2px;
+}
+/*!
+ * jQuery UI CSS Framework 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/category/theming/
+ */
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ */
+
+/*!
+ * jQuery UI CSS Framework 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/category/theming/
+ */
+/*
+
+
+ */
+
+/*
+
+ */
+@import url("https://fonts.googleapis.com/css?family=Lato:300|Raleway:300");
+/* line 12, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 48px;
+  color: #c7b625;
+}
+
+/* line 17, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  margin: 0px;
+  color: #c7b625;
+  line-height: 1.4;
+}
+
+/* line 24, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+a {
+  color: #3b5a0d;
+}
+
+/* line 27, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+h2 {
+  font-weight: 100;
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* line 55, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 68, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 76, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 90, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+/* line 103, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 113, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 122, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 133, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 146, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 156, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 166, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 175, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 185, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 196, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 204, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 213, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 222, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 230, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 234, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 245, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 254, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 263, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 271, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 283, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 299, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 309, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 320, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 331, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 343, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+/* line 354, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 365, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 379, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 388, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 397, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 407, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 417, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+/* line 426, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 436, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+/* line 449, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+/* line 458, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 469, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+/* line 477, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+/* line 488, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 491, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+body > .wrapper {
+  position: relative;
+  background-color: #bbbbbb;
+  overflow: hidden;
+}
+
+/* line 496, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav-wrapper {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  margin: 0 auto;
+  height: 140px;
+}
+
+/* line 504, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav {
+  z-index: 99;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 0px 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/* line 506, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav.fixed {
+  position: fixed;
+  background-color: white;
+}
+/* line 510, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav.fixed .items a {
+  color: #c7b625;
+  text-shadow: none;
+}
+/* line 513, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav.fixed .items a.active, .nav.fixed .items a:hover {
+  color: #3b5a0d;
+}
+/* line 518, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav.fixed .logo {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  background-position: 50% 50%;
+}
+/* line 524, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav.fixed .logo .scrolled {
+  display: block;
+}
+/* line 527, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav.fixed .logo .normal {
+  display: none;
+}
+/* line 540, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 140px;
+  width: 140px;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* line 543, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav .logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+/* line 556, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav .logo .scrolled {
+  display: none;
+}
+/* line 559, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav .logo .normal {
+  display: block;
+}
+/* line 563, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav .items {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+}
+/* line 571, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav .items a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 0px 0px 1px #000000;
+  margin-left: 30px;
+}
+/* line 576, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.nav .items a.active, .nav .items a:hover {
+  color: #c7b625;
+  text-decoration: underline;
+}
+
+/* line 584, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  background-color: #3b5a0d;
+}
+
+/* line 592, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow > div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+/* line 593, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow > div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 1, 1, 0.3);
+}
+/* line 612, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow > div.fade_out {
+  -webkit-animation: fadeout 1000ms ease-in-out;
+          animation: fadeout 1000ms ease-in-out;
+}
+/* line 615, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow > div.fade_in {
+  -webkit-animation: fadein 1000ms ease-in-out;
+          animation: fadein 1000ms ease-in-out;
+}
+/* line 618, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow > div .image {
+  -webkit-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+/* line 621, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow > div .image.fade_out {
+  -webkit-animation: fadeout 1000ms ease-in-out;
+          animation: fadeout 1000ms ease-in-out;
+}
+/* line 624, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow > div .image.fade_in {
+  -webkit-animation: fadein 1000ms ease-in-out;
+          animation: fadein 1000ms ease-in-out;
+}
+/* line 627, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow > div .image:after {
+  -webkit-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+/* line 630, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow > div .image.colored {
+  -webkit-transition: all 5000ms ease;
+  transition: all 5000ms ease;
+}
+/* line 632, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow > div .image.colored:after {
+  opacity: 0;
+  -webkit-transition: all 5000ms ease;
+  transition: all 5000ms ease;
+}
+/* line 639, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow > div img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/* line 647, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow > div .text {
+  position: relative;
+  z-index: 1;
+  color: white;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+/* line 652, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow > div .text h2, .slideshow > div .text .innertext {
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  color: white;
+  letter-spacing: 10px;
+  font-weight: 100;
+}
+/* line 659, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow > div .text h2 .seperator, .slideshow > div .text .innertext .seperator {
+  background-color: white;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  opacity: 0;
+}
+/* line 664, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow > div .text h2 .seperator.visible, .slideshow > div .text .innertext .seperator.visible {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+}
+/* line 669, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow > div .text h2 p, .slideshow > div .text .innertext p {
+  letter-spacing: normal;
+  color: white;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+/* line 676, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow > div .text h2.hidden {
+  opacity: 0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+/* line 680, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow > div .text .innertext.hidden {
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+/* line 686, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.cta {
+  font-size: 14px;
+  position: absolute;
+  bottom: 40px;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  color: #3b5a0d;
+  padding: 10px 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: inline-block;
+  border: 2px solid #3b5a0d;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* line 700, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.cta:hover {
+  background-color: #3b5a0d;
+  color: white;
+}
+
+/* line 705, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.exit {
+  font-size: 50px;
+  color: #c7b625;
+  display: none;
+}
+
+/* line 710, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.hamburger {
+  font-size: 50px;
+  color: #c7b625;
+  display: none;
+  cursor: pointer;
+}
+
+/* line 716, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row {
+  background-color: white;
+  overflow: hidden;
+}
+/* line 717, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.indulge {
+  text-align: center;
+  padding: 60px 0px 100px;
+  overflow: hidden;
+  background-color: #c7b625;
+  position: relative;
+}
+/* line 723, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.indulge:after {
+  display: block;
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/logo-04.png");
+  z-index: 1;
+}
+/* line 734, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.indulge h2 {
+  position: relative;
+  color: #3b5a0d;
+  z-index: 2;
+}
+/* line 739, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.indulge p {
+  position: relative;
+  color: white;
+  z-index: 2;
+}
+/* line 744, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.indulge .seperator {
+  position: relative;
+  background-color: #3b5a0d;
+  z-index: 2;
+}
+/* line 752, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+/* line 757, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.introduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 760, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.rooms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 762, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.rooms a {
+  text-decoration: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  position: relative;
+  min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  cursor: pointer;
+}
+/* line 766, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.rooms a .room {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+/* line 769, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.rooms a .room .text {
+  width: 100%;
+}
+/* line 774, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.rooms a:hover .cta {
+  background-color: #3b5a0d;
+  color: white;
+}
+/* line 778, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.rooms a:hover:after {
+  opacity: 0;
+}
+/* line 782, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.rooms a:after {
+  display: block;
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #3b5a0d;
+  opacity: 1;
+  mix-blend-mode: screen;
+  -webkit-transition: all 2000ms ease;
+  transition: all 2000ms ease;
+}
+/* line 803, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.rooms a.hovered .text h2 {
+  top: 60px;
+}
+/* line 806, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.rooms a.hovered .text p {
+  opacity: 1;
+}
+/* line 811, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.rooms a .text {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* line 817, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.rooms a .text h2 {
+  font-size: 26px;
+  line-height: 1;
+  position: absolute;
+  top: calc(50% - 20px);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  margin: 0px;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  color: white;
+}
+/* line 829, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.rooms a .text p {
+  color: white;
+  font-size: 16px;
+  opacity: 0;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+/* line 836, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.rooms a .image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+/* line 842, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.rooms a .image:after {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  content: " ";
+  z-index: 1;
+  background-color: rgba(1, 1, 1, 0.3);
+}
+/* line 852, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.rooms a .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 861, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.seperator {
+  width: 100px;
+  height: 2px;
+  display: inline-block;
+  background-color: #c7b625;
+  margin: 20px 0px;
+}
+
+/* line 868, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.col-6 {
+  width: 50%;
+  float: left;
+}
+/* line 871, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.col-6.introduction {
+  padding: 100px 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/* line 875, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.col-6.booking {
+  position: relative;
+  padding: 100px 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(1, 1, 1, 0.1);
+}
+
+/* line 882, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+svg {
+  fill: #3b5a0d;
+}
+
+/* line 885, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.timeandweather {
+  margin: 60px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 888, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.timeandweather p {
+  margin-left: 8px;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+}
+/* line 893, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.timeandweather .time, .timeandweather .weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/* line 897, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.timeandweather .weather {
+  margin-right: 100px;
+}
+
+/* line 901, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 50px;
+}
+/* line 905, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.infos .info {
+  position: relative;
+}
+/* line 908, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.infos .info:hover .date-picker {
+  display: block;
+  z-index: 99;
+}
+/* line 912, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.infos .info:hover .number-picker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 99;
+}
+/* line 918, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.infos .info.departure .date-picker {
+  left: -25%;
+}
+/* line 922, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.infos .info .number-picker {
+  position: absolute;
+  width: 100%;
+  top: 80%;
+  left: 0px;
+  background-color: white;
+  border: 1px solid rgba(1, 1, 1, 0.1);
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Raleway", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: none;
+}
+/* line 936, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.infos .info .number-picker > div {
+  padding: 5px 30px;
+  margin: 10px 0px;
+  background-color: white;
+  border: 1px solid rgba(1, 1, 1, 0.1);
+  cursor: pointer;
+}
+/* line 942, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.infos .info .number-picker > div:hover, .infos .info .number-picker > div.active {
+  background-color: #c7b625;
+  color: white;
+}
+/* line 948, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.infos .info .date-picker {
+  position: absolute;
+  top: 80%;
+  left: 0px;
+  display: none;
+}
+/* line 954, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.infos .info h2 {
+  font-size: 24px;
+}
+/* line 957, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.infos .info .value {
+  margin-top: 40px;
+  background-color: white;
+  text-align: center;
+  position: relative;
+}
+/* line 962, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.infos .info .value .month {
+  color: #3b5a0d;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  padding-top: 30px;
+}
+/* line 968, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.infos .info .value .date, .infos .info .value .people {
+  color: #c7b625;
+  font-family: "Raleway", sans-serif;
+  font-size: 60px;
+  margin-top: 40px;
+}
+/* line 974, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.infos .info .value .popup-icon {
+  margin-top: 40px;
+}
+/* line 976, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.infos .info .value .popup-icon.up {
+  padding-top: 21px;
+}
+/* line 979, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.infos .info .value .popup-icon svg {
+  cursor: pointer;
+}
+/* line 983, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.infos .info .value:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: -16px;
+  left: calc(50% - 15px);
+  width: 0px;
+  height: 0px;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-bottom: 16px solid white;
+}
+
+/* line 998, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.submit_button_and_hotline {
+  margin-top: 100px;
+  text-align: right;
+}
+/* line 1001, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.submit_button_and_hotline .submit {
+  font-family: "Raleway", sans-serif;
+  color: #3b5a0d;
+  padding: 20px 40px;
+  display: inline-block;
+  border: 2px solid #3b5a0d;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* line 1009, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.submit_button_and_hotline .submit:hover {
+  background-color: #3b5a0d;
+  color: white;
+}
+/* line 1014, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.submit_button_and_hotline h2 {
+  font-size: 14px;
+}
+/* line 1016, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.submit_button_and_hotline h2:nth-child(1) {
+  margin-top: 30px;
+}
+/* line 1020, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.submit_button_and_hotline p {
+  font-size: 10px;
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 1025, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 1027, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.event .heading {
+  position: relative;
+  width: 33.33%;
+  padding: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #3b5a0d;
+}
+/* line 1033, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.event .heading p {
+  color: white;
+  margin-top: 20px;
+}
+/* line 1037, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.event .heading:after {
+  display: block;
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/logo-03.png");
+  background-size: cover;
+}
+/* line 1048, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.event .heading .content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+/* line 1053, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.event .events {
+  width: 66.66%;
+}
+/* line 1055, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.event .events .event {
+  width: 100%;
+  padding: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/* line 1059, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.event .events .event h2 {
+  font-size: 20px;
+  margin-top: 0px;
+}
+/* line 1063, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.event .events .event .title {
+  position: relative;
+  margin-left: 90px;
+  min-height: 90px;
+  margin-bottom: 20px;
+}
+/* line 1067, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.event .events .event .title .time {
+  position: absolute;
+  left: -90px;
+  top: 0px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 80px;
+  height: 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+  border: 1px solid #3b5a0d;
+  padding: 10px;
+  color: #3b5a0d;
+}
+/* line 1081, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.event .events .event .title .time .date {
+  font-size: 40px;
+}
+
+/* line 1091, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.homepage.wrapper .row.gallery {
+  background-color: #3b5a0d;
+}
+/* line 1093, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.homepage.wrapper .row.gallery h2 {
+  color: #c7b625;
+}
+/* line 1096, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.homepage.wrapper .row.gallery .seperator {
+  background-color: #c7b625;
+}
+/* line 1099, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.homepage.wrapper .row.gallery:after {
+  display: block;
+  content: " ";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/logo-03.png");
+  background-size: cover;
+}
+
+/* line 1112, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.gallery {
+  background-color: #c7b625;
+  position: relative;
+}
+/* line 1114, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.gallery h2 {
+  color: #3b5a0d;
+}
+/* line 1117, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.gallery .seperator {
+  background-color: #3b5a0d;
+  margin: 20px 0px 40px;
+}
+/* line 1121, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.gallery p {
+  color: white;
+}
+/* line 1124, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.gallery:after {
+  display: block;
+  content: " ";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/logo-04.png");
+  background-size: cover;
+}
+/* line 1136, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.gallery .content-wrapper {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 1141, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.gallery .heading {
+  width: 33.33%;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+/* line 1147, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.gallery #gallery {
+  width: 66.66%;
+  height: 500px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  position: relative;
+}
+/* line 1152, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.gallery #gallery div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+/* line 1158, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.gallery #gallery div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 1166, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.footer {
+  position: relative;
+  background-color: #c7b625;
+  padding: 100px 0px;
+}
+/* line 1168, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.footer:after {
+  display: block;
+  content: " ";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/logo-04.png");
+  background-size: cover;
+}
+/* line 1181, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.footer .content-wrapper {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 1185, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.footer .content-wrapper > div {
+  width: 33.33%;
+}
+/* line 1187, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.footer .content-wrapper > div.logo-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* line 1190, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.footer .content-wrapper > div.logo-col .logo {
+  width: 200px;
+  height: 200px;
+  background-image: url("/assets/mds123.png");
+  background-size: contain;
+  background-position: 50% 50%;
+  display: block;
+  position: relative;
+}
+/* line 1200, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.footer .content-wrapper > div h2 {
+  color: #3b5a0d;
+}
+/* line 1203, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.footer .content-wrapper > div .seperator {
+  background-color: #3b5a0d;
+}
+/* line 1206, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.footer .content-wrapper > div p {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+/* line 1213, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.footer .content-wrapper > div.about-us, .footer .content-wrapper > div.recent-posts {
+  padding: 0px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/* line 1217, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.footer .content-wrapper > div.recent-posts p {
+  cursor: pointer;
+}
+/* line 1219, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.footer .content-wrapper > div.recent-posts p:hover {
+  color: #3b5a0d;
+  text-decoration: underline;
+}
+
+/* line 1227, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.ui-widget {
+  font-family: "Raleway", sans-serif;
+  color: #c7b625;
+}
+
+/* line 1231, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.ui-widget-header {
+  color: #3b5a0d;
+}
+
+/* line 1234, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+  color: #c7b625;
+}
+
+/* line 1237, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+  color: white;
+  background-color: #c7b625;
+  border: 0px;
+}
+
+/* line 1242, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.hero {
+  position: relative;
+  height: 500px;
+  background-color: #c7b625;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 100px;
+}
+/* line 1243, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.hero img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+/* line 1256, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.hero h2 {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+/* line 1261, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.hero p {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 40px;
+}
+
+/* line 1273, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.shade {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 1, 1, 0.3);
+  z-index: 1;
+}
+
+/* line 1283, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.sign_in .hero {
+  height: 140px;
+}
+/* line 1286, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.sign_in .wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 100px 0px;
+}
+
+/* line 1296, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+form input {
+  border: 0px;
+  font-family: "Raleway", sans-serif;
+  outline: none;
+  width: 300px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 2;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/* line 1306, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+form input[type=submit] {
+  background-color: white;
+  width: auto;
+  cursor: pointer;
+  color: #3b5a0d;
+  padding: 10px 20px;
+}
+
+/* line 1315, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.rate {
+  width: 100%;
+  border: 1px solid rgba(1, 1, 1, 0.1);
+  margin-top: 50px;
+  padding: 35px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: right;
+  font-family: "Raleway", sans-serif;
+  color: #c7b625;
+}
+/* line 1322, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.rate span {
+  color: #3b5a0d;
+  font-size: 48px;
+  margin-right: 10px;
+}
+
+/* line 1330, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.amenities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 1332, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.amenities .col {
+  width: 50%;
+}
+/* line 1334, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.amenities .col.introduction {
+  background-color: #3b5a0d;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 100px;
+}
+/* line 1338, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.amenities .col.introduction p {
+  color: white;
+}
+/* line 1342, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.amenities .col.amenities {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 100px;
+}
+/* line 1345, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.amenities .col.amenities .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 1347, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.amenities .col.amenities .row .amenity {
+  width: 50%;
+  margin-bottom: 50px;
+}
+/* line 1350, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.amenities .col.amenities .row .amenity .name {
+  font-family: "Raleway", sans-serif;
+}
+/* line 1353, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.amenities .col.amenities .row .amenity .value {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: rgba(1, 1, 1, 0.5);
+}
+
+/* line 1364, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.show_page.rooms a {
+  width: 33.33%;
+}
+
+/* line 1368, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.introduction {
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+}
+/* line 1372, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.introduction .col {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 80px;
+}
+
+/* line 1377, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.rooms.grid {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/* line 1379, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.rooms.grid a {
+  width: 50%;
+}
+
+/* line 1384, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.event.show.wrapper .content {
+  background-color: white;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 80px;
+}
+/* line 1387, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.event.show.wrapper .content h2 {
+  text-transform: uppercase;
+}
+
+/* line 1394, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.explore.introduction {
+  display: block;
+  padding: 80px;
+}
+
+/* line 1398, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.tour {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #c7b625;
+}
+/* line 1402, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.tour .image {
+  position: relative;
+  width: 66.66%;
+}
+/* line 1405, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.tour .image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/* line 1414, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.tour .text {
+  position: relative;
+  width: 33.33%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 60px 20px;
+  background-image: url("/assets/logo-04.png");
+  background-size: cover;
+}
+/* line 1421, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.tour .text h2 {
+  color: #3b5a0d;
+  margin-top: 0px;
+}
+/* line 1425, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.tour .text .seperator {
+  background-color: #3b5a0d;
+}
+/* line 1428, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.tour .text p {
+  color: white;
+  margin-bottom: 20px;
+}
+/* line 1433, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.tour .text a .cta {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  -webkit-transform: none;
+          transform: none;
+}
+/* line 1444, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.tour:nth-child(even) .image {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+/* line 1447, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.tour:nth-child(even) .text {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+/* line 1452, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.tour.show.wrapper {
+  display: block;
+}
+/* line 1454, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.tour.show.wrapper .content {
+  background-color: white;
+  overflow: hidden;
+  padding: 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/* line 1459, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.tour.show.wrapper .content ul {
+  margin-top: 40px;
+}
+/* line 1461, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.tour.show.wrapper .content ul li {
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 20px;
+}
+/* line 1464, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.tour.show.wrapper .content ul li:last-child {
+  margin-bottom: 0px;
+}
+
+/* line 1471, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.signup {
+  padding: 80px;
+  background-color: #c7b625;
+}
+/* line 1473, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.signup h2 {
+  color: #3b5a0d;
+}
+/* line 1476, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.signup .seperator {
+  background-color: #3b5a0d;
+}
+/* line 1481, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.signup .input input {
+  width: 100%;
+}
+
+/* line 1486, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.flash {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 20px;
+}
+/* line 1491, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.flash#alert {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+/* line 1496, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.flash#notice {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+/* line 1502, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.article {
+  overflow: hidden;
+  margin: 140px 0px;
+}
+/* line 1504, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.article .hero {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+/* line 1508, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.article .hero img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/* line 1517, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.article .text {
+  max-width: 600px;
+  margin: 0 auto;
+}
+/* line 1520, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.article .text p {
+  margin-bottom: 20px;
+}
+/* line 1523, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.article .text a.read-more {
+  font-family: "Raleway", sans-serif;
+}
+/* line 1526, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.article .text a {
+  text-decoration: none;
+}
+/* line 1529, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.article .text h2 a {
+  text-decoration: none;
+}
+/* line 1532, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.article .text h3 {
+  font-family: "Raleway", sans-serif;
+  color: #c7b625;
+}
+
+/* line 1539, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.article-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+/* line 1542, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.article-wrapper .article {
+  background-color: white;
+  margin: 0px;
+  padding: 100px 0px;
+}
+/* line 1546, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.article-wrapper .article img {
+  width: 100%;
+  margin: 100px 0px;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+/* line 1553, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.comments {
+  position: relative;
+  margin-top: 100px;
+}
+/* line 1556, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.comments .avatar {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+/* line 1562, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.comments .avatar img {
+  margin: 0px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 1573, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.comment {
+  margin-left: 70px;
+  position: relative;
+}
+/* line 1576, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.comment h3 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+/* line 1580, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.comment .avatar {
+  position: absolute;
+  left: -70px;
+  top: 0px;
+}
+
+/* line 1587, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.reply form {
+  display: block;
+}
+/* line 1588, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.reply form.comment {
+  margin: 0px;
+}
+/* line 1591, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.reply form .fields {
+  margin-bottom: 20px;
+}
+/* line 1595, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.reply form input {
+  width: 100%;
+  border: 1px solid #c7b625;
+}
+/* line 1599, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.reply form textarea.text {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #c7b625;
+  display: block;
+  margin: 0px;
+  height: 200px;
+  font-family: "Raleway", sans-serif;
+  padding: 10px;
+  font-size: 1rem;
+  outline: 0;
+}
+
+/* line 1613, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.contact {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 100px;
+}
+/* line 1616, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.contact textarea {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 200px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-family: "Raleway", sans-serif;
+}
+/* line 1625, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.contact input {
+  border: 1px solid #c7b625;
+  width: 100%;
+}
+/* line 1628, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.contact input[type=submit] {
+  width: auto;
+  padding: 10px 20px;
+}
+
+/* line 1634, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.maps {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+/* line 1638, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.maps iframe {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 1646, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.choose-your-room.wrapper, .booking.wrapper {
+  background-color: white;
+  overflow: hidden;
+}
+/* line 1649, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.choose-your-room.wrapper .body, .booking.wrapper .body {
+  padding: 100px;
+}
+/* line 1651, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.choose-your-room.wrapper .body h3, .booking.wrapper .body h3 {
+  font-family: "Raleway", sans-serif;
+  color: #c7b625;
+}
+/* line 1656, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.choose-your-room.wrapper .rooms, .booking.wrapper .rooms {
+  background-color: rgba(1, 1, 1, 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+}
+/* line 1661, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.choose-your-room.wrapper .your-stay, .booking.wrapper .your-stay {
+  position: relative;
+  margin-bottom: 50px;
+}
+/* line 1662, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.choose-your-room.wrapper .your-stay h2, .booking.wrapper .your-stay h2 {
+  text-align: center;
+}
+
+/* line 1670, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.checkincheckout .row {
+  border: 1px solid #3b5a0d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+}
+/* line 1678, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.checkincheckout .row:last-child {
+  margin-bottom: 0px;
+}
+/* line 1681, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.checkincheckout .row .type {
+  color: rgba(1, 1, 1, 0.5);
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* line 1688, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.checkincheckout .row .month {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  color: #c7b625;
+  margin-bottom: 5px;
+}
+/* line 1694, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.checkincheckout .row .date {
+  font-family: "Lato", sans-serif;
+  font-size: 40px;
+  color: #3b5a0d;
+}
+/* line 1700, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.checkincheckout .row.total .amount {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  color: #3b5a0d;
+}
+
+/* line 1708, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.room2 {
+  position: relative;
+  margin-bottom: 20px;
+}
+/* line 1711, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.room2:last-child {
+  margin-bottom: 0px;
+}
+/* line 1714, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.room2 .hero {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+/* line 1721, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.room2 .text {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+  padding-bottom: 40px;
+}
+/* line 1728, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.room2 .text a {
+  text-decoration: none;
+}
+/* line 1731, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.room2 .text h2 {
+  color: white;
+}
+/* line 1734, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.room2 .text p {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+/* line 1738, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.room2 .text p span {
+  text-decoration: underline;
+}
+/* line 1742, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.room2 .text .cta {
+  position: relative;
+  -webkit-transform: none;
+          transform: none;
+  left: auto;
+  top: auto;
+  bottom: auto;
+  border: 1px solid white;
+  color: white;
+  margin-top: 20px;
+}
+/* line 1751, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.room2 .text .cta:hover {
+  background-color: white;
+  color: #3b5a0d;
+}
+
+/* line 1758, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.checkout {
+  position: relative;
+  display: block;
+  text-align: right;
+  padding: 20px 0px;
+}
+/* line 1763, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.checkout .cta {
+  position: relative;
+  display: inline-block;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  -webkit-transform: none;
+          transform: none;
+  font-size: 30px;
+}
+
+/* line 1774, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.cta.book-now {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* line 1779, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.room.row .room {
+  font-family: "Raleway", sans-serif;
+  color: #3b5a0d;
+}
+
+/* line 1784, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.booking_form {
+  margin-top: 20px;
+}
+/* line 1786, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.booking_form input {
+  border: 1px solid #3b5a0d;
+  width: 100%;
+}
+/* line 1789, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.booking_form input[type=submit] {
+  width: auto;
+  padding: 10px 20px;
+}
+
+/* line 1795, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.completed {
+  background-color: white;
+}
+/* line 1797, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.completed h2 {
+  color: #3b5a0d;
+}
+
+/* line 1803, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.homepage.wrapper #gallery > div:after {
+  background-color: #3b5a0d;
+}
+
+/* line 1808, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+#gallery > div {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+/* line 1814, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+#gallery > div:after {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #3b5a0d;
+  opacity: 1;
+  mix-blend-mode: screen;
+  content: " ";
+}
+
+/* line 1827, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow .text {
+  position: relative;
+  z-index: 4;
+}
+/* line 1831, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow .image {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+}
+/* line 1837, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.slideshow .image:after {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #3b5a0d;
+  mix-blend-mode: screen;
+  opacity: 1;
+  content: " ";
+}
+
+/* line 1852, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.stay.wrapper .row.introduction h2 {
+  font-size: 36px;
+}
+
+/* line 1857, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.ui-datepicker-month {
+  font-weight: 100;
+}
+
+/* line 1862, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.row.indulge:after, .row.event .heading:after, .row.gallery:after, .footer:after {
+  opacity: 0.3;
+}
+
+/* line 1867, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+.book_now {
+  position: absolute;
+  top: calc(-20px + -1.5rem);
+  right: 80px;
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+  display: inline-block;
+  background-color: #3b5a0d;
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 20px;
+  line-height: 1.5rem;
+  padding-left: 100px;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  /* line 1888, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .nav .logo .normal {
+    display: none;
+  }
+
+  /* line 1893, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .tour.show.wrapper .content, .row.signup {
+    padding: 20px;
+  }
+
+  /* line 1896, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .row.explore.introduction {
+    padding: 20px;
+  }
+
+  /* line 1900, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .row.tours .tour {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  /* line 1903, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .row.tours .tour:nth-child(even) .image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  /* line 1907, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .row.tours .tour .image {
+    width: 100%;
+    height: 400px;
+  }
+  /* line 1911, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .row.tours .tour .text {
+    width: 100%;
+  }
+
+  /* line 1917, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .event.show.wrapper .content {
+    padding: 20px;
+  }
+
+  /* line 1922, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .row.rooms.grid a {
+    width: 100%;
+  }
+
+  /* line 1926, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .hero {
+    padding: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  /* line 1930, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .hero h2 {
+    text-align: center;
+  }
+
+  /* line 1935, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .row.amenities .col {
+    width: 100%;
+  }
+  /* line 1937, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .row.amenities .col .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  /* line 1944, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .footer .content-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  /* line 1946, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .footer .content-wrapper > div {
+    width: 100%;
+  }
+  /* line 1947, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .footer .content-wrapper > div.logo-col {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 30px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  /* line 1957, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .row.gallery .content-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  /* line 1959, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .row.gallery .content-wrapper .heading {
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  /* line 1963, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .row.gallery .content-wrapper #gallery {
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+
+  /* line 1970, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .row.event .heading {
+    width: 100%;
+  }
+  /* line 1973, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .row.event .events {
+    width: 100%;
+  }
+
+  /* line 1978, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .row.rooms a {
+    width: 100%;
+    position: relative;
+  }
+
+  /* line 1984, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .infos .info {
+    width: 30%;
+    text-align: center;
+  }
+
+  /* line 1989, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .hotline {
+    padding-bottom: 50px;
+  }
+
+  /* line 1992, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .col-6 {
+    width: 100%;
+  }
+
+  /* line 1995, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  /* line 1998, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .nav {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    padding: 0px 30px;
+  }
+  /* line 2002, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .nav .logo {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    background-image: url("/assets/logo-04-300x232.png");
+    background-position: 50% 50%;
+  }
+  /* line 2009, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .nav .items {
+    position: fixed;
+    top: 0px;
+    right: -200px;
+    width: 200px;
+    height: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: white;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 20px;
+    padding-top: 60px;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
+  /* line 2023, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .nav .items a {
+    color: #c7b625;
+    text-shadow: none;
+    margin: 0px;
+    display: block;
+    margin-bottom: 20px;
+  }
+  /* line 2030, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .nav .items .exit {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+  /* line 2037, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .nav .items.revealed {
+    right: 0px;
+  }
+  /* line 2041, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .nav .hamburger {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    line-height: 1;
+  }
+}
+@media (max-width: 700px) {
+  /* line 2052, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .book_now {
+    display: none;
+  }
+
+  /* line 2056, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .choose-your-room.wrapper .body, .booking.wrapper .body {
+    padding: 20px;
+  }
+
+  /* line 2060, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .row.contact {
+    padding: 20px;
+  }
+
+  /* line 2064, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .row.introduction .col {
+    padding: 20px;
+  }
+
+  /* line 2070, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .row.amenities .col.introduction, .row.amenities .col.amenities {
+    padding: 20px;
+  }
+
+  /* line 2075, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  h2 {
+    font-size: 20px;
+  }
+
+  /* line 2078, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  /* line 2083, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  h2 {
+    font-size: 20px;
+  }
+
+  /* line 2086, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  p {
+    font-size: 14px;
+  }
+
+  /* line 2090, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .hero h2 {
+    text-align: center;
+  }
+
+  /* line 2094, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .article .input.text {
+    padding: 0px;
+  }
+
+  /* line 2097, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .col-6.booking, .col-6.introduction {
+    padding: 20px;
+  }
+
+  /* line 2101, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .col-6.booking h2 {
+    font-size: 14px;
+  }
+  /* line 2106, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .col-6.booking .info .value .month {
+    font-size: 16px;
+  }
+
+  /* line 2113, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .article .text {
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  /* line 2114, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .article .textdiv {
+    padding: 0px;
+  }
+
+  /* line 2122, /Users/macbook/Desktop/dev/active/mds_rb/app/assets/stylesheets/application.scss */
+  .comment .text {
+    padding: 0px;
+  }
+}
+@-webkit-keyframes fadeout {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@keyframes fadeout {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@-webkit-keyframes fadein {
+  0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes fadein {
+  0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
