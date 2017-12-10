@@ -2072,13 +2072,19 @@ form{
     }
   }
   h2{
-    font-size: 38px;
+    font-size: 20px;
   }
   p{
-    font-size: 24px;
+    font-size: 14px;
   }
 }
 @media(max-width: 600px){
+  h2{
+    font-size: 20px;
+  }
+  p{
+    font-size: 14px;
+  }
   .hero{
     h2{
       text-align: center;
@@ -2092,7 +2098,7 @@ form{
   }
   .col-6.booking{
     h2{
-      font-size: 20px;
+      font-size: 14px;
     }
     .info{
       .value{
