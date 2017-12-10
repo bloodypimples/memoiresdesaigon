@@ -23,6 +23,9 @@ p{
 a{
   color: $primary;
 }
+h2{
+  font-weight: 100;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -1812,6 +1815,9 @@ form{
       font-size: 36px;
     }
   }
+}
+.ui-datepicker-month{
+  font-weight: 100;
 }
 @media(max-width: 1000px){
   .nav{
