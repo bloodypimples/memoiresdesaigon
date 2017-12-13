@@ -46,19 +46,6 @@ module ApplicationHelper
     $timestamp = 1.day.from_now.to_i * 1000
   end
 
-  def get_temp
-    if Weather.respond_to?(:lookup_by_location)
-      @weather = Weather.lookup_by_location('HO CHI MINH CITY, VIETNAM', Weather::Units::CELSIUS)
-      if @weather.respond_to?(:condition)
-        @temp = @weather.condition.temp.to_s + "°C"
-      else
-        @temp = "28°C"
-      end
-    else
-      @temp = "28°C"
-    end
-  end
-
   def get_event_date(event)
     $date_object = Time.parse(event.date)
     $date_object.strftime("%d")

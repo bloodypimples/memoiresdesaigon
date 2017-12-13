@@ -8,6 +8,11 @@ $secondary: #c7b625;
 $secondary_shade: #b3a321;
 $heading: 'Raleway', sans-serif;
 $normal: 'Lato', sans-serif;
+.introduction{
+  h2{
+    font-size: 40px;
+  }
+}
 h2{
   font-family: $heading;
   font-size: 48px;
@@ -503,6 +508,7 @@ body > .wrapper{
 .nav{
   z-index: 99;
   &.fixed{
+    animation: nav_fadein 300ms ease;
     position: fixed;
     background-color: white;
     .items{
@@ -2132,4 +2138,9 @@ form{
 @keyframes fadein{
   0% {transform: scale(0.8)}
   100% {transform: scale(1)}
+}
+
+@keyframes nav_fadein{
+  0% {opacity: 0}
+  100% {opacity: 1}
 }
