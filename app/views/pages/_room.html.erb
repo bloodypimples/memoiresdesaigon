@@ -5,7 +5,11 @@
     </div>
     <div class="text">
       <h2><%= room.name %></h2>
-      <p><%= room.short_description %></p>
+      <% if controller_name == 'rooms' %>
+        <p><%= room.short_description if room.short_description %></p>
+      <% else %>
+        <p><%= room.home_page_description if room.home_page_description %></p>
+      <% end %>
       <div class="cta">
         STARTING AT $<%= room.rate %>
       </div>

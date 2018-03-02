@@ -1,4 +1,4 @@
-ActiveAdmin.register GalleryImage do
+ActiveAdmin.register GalleryImage, as: "Image" do
 
   permit_params :gallery_id, :image
 
@@ -15,7 +15,9 @@ ActiveAdmin.register GalleryImage do
 
   index do
     selectable_column
-    id_column
+    column :image do |ad|
+      link_to image_tag(ad.image.url(:thumb)), admin_image_path(ad)
+    end
     column :gallery
     actions
   end
@@ -27,6 +29,6 @@ ActiveAdmin.register GalleryImage do
   end
 
   action_item :new, only: :show do
-    link_to 'New Image', new_admin_gallery_image_path
+    link_to 'New Image', new_admin_image_path
   end
 end

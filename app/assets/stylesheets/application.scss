@@ -1858,6 +1858,11 @@ form{
       font-size: 36px;
     }
   }
+  .rooms.grid{
+    > a{
+      flex-basis: 50%;
+    }
+  }
 }
 .ui-datepicker-month{
   font-weight: 100;

@@ -43,7 +43,7 @@ ActiveAdmin.register_page "Dashboard" do
         panel "Recent Gallery Images" do
           ul do
             GalleryImage.last(5).map do |gi|
-              li link_to(gi.image_file_name, admin_gallery_image_path(gi))
+              li link_to(gi.image_file_name, admin_image_path(gi))
             end
           end
         end
