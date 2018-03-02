@@ -1,4 +1,6 @@
 ActiveAdmin.register ContactForm do
+  actions :all, :except => [:new]
+
   permit_params :tour_id, :name, :email, :phone
 
   index do

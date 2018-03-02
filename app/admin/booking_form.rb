@@ -1,4 +1,6 @@
 ActiveAdmin.register BookingForm do
+  actions :all, :except => [:new]
+
   permit_params :checkin, :checkout, :guests, :rooms, :customer_name, :customer_email, :customer_phone
 
   index do

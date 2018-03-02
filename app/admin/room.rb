@@ -20,8 +20,8 @@ ActiveAdmin.register Room do
       input :size
       input :bed
       input :occupancy
+      input :long_description, as: :ckeditor
     end
-    inputs 'Description', :long_description
     input :image
     input :bookable, as: :boolean
     actions

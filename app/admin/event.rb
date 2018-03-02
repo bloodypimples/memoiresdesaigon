@@ -15,7 +15,7 @@ ActiveAdmin.register Event do
       input :name
       input :date, as: :datetime_picker
       input :short_description
-      input :body
+      input :body, as: :ckeditor
       input :image
     end
     actions
