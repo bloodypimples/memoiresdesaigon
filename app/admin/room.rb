@@ -16,7 +16,6 @@ ActiveAdmin.register Room do
       input :name
       input :rate
       input :short_description
-      input :home_page_description
       input :size
       input :bed
       input :occupancy
